@@ -1,0 +1,25 @@
+.hero__image {
+  position: relative;
+  background-image: url("/images/bg-intro-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 17.5rem;
+}
+
+.hero__image::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("/images/image-mockups.png");
+  background-size: 96%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  margin: 0 auto;
+}
+
+.hero__text h1 {
+  font-weight: 300;
+}
+/*# sourceMappingURL=hero.css.map */

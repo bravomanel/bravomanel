@@ -1,0 +1,147 @@
+html {
+    font-size: 15px; 
+}
+
+body {
+    background-color: hsl(233, 47%, 7%);
+    font-family: 'Inter', 'Lexend Deca', sans-serif;
+    /* font-family: 'Lexend Deca', sans-serif; */
+}
+
+h1, h3 {
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2rem;
+    margin-bottom: 0;
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.6);
+    text-align: center;
+    font-variant: small-caps;
+    margin-top: 0;
+}
+
+#mainPara {
+    color: hsla(0, 0%, 100%, 0.75);
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    font-variant: none;
+    margin-top: 1rem;
+}
+#purple {
+    color: hsl(277, 64%, 61%);
+}
+
+.subFeature h3 {
+    font-size: 1.6rem;
+}
+
+.subFeature p {
+    font-size: 1rem;
+    letter-spacing: .1rem;
+}
+
+
+/* layout */
+
+/* Standard - Mobile */
+
+.block {
+    background-color: hsl(244, 38%, 16%);
+    border-radius: .5rem;
+    height: 100%;
+    margin: 5rem 5%;
+    padding-bottom: 1rem;
+}
+
+.image {
+    background: #C33764;  /* fallback colour. Make sure this is just one solid colour. */
+    background: -webkit-linear-gradient(hsla(277, 64%, 61%, .5), hsla(277, 64%, 61%, .5)), url("images/image-header-mobile.jpg");
+    background: linear-gradient(hsla(277, 64%, 61%, .5), hsla(277, 64%, 61%, .5)), url("images/image-header-mobile.jpg"); /* The least supported option. */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15.8rem;
+    opacity: .8;
+
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+.text {
+   margin: 2.5rem 8%;
+}
+
+
+
+/* Desktop */
+
+@media screen and (min-width: 55em) {
+
+    .block {
+        margin-left:auto;
+        margin-right:auto;
+        display: flex;
+        flex-direction: row-reverse;
+        height: 30em;
+        width: 50em;
+        padding-bottom: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -18rem 0 0 -25rem;
+    }
+
+    .text {
+        width: 30rem;
+    }
+
+    h1, h3, p, #mainPara {
+        text-align: left;
+    }
+
+    .features {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .image {
+        background: #C33764;  /* fallback colour. Make sure this is just one solid colour. */
+        background: -webkit-linear-gradient(hsla(277, 64%, 61%, .5), hsla(277, 64%, 61%, .5)), url("images/image-header-desktop.jpg");
+        background: linear-gradient(hsla(277, 64%, 61%, .5), hsla(277, 64%, 61%, .5)), url("images/image-header-desktop.jpg"); /* The least supported option. */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        width: 35rem;
+        height: 30em;
+
+        border-top-left-radius: 0;
+        border-bottom-right-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }
+    
+}
+
+@media screen and (min-width: 72em) {
+
+    .block {
+        height: 25em;
+        width: 70em;
+        margin: -15rem 0 0 -35rem;
+    }
+
+    .image {
+        width: 45rem;
+        height: 25em;
+    }
+
+}
