@@ -1,9 +1,10 @@
 .hero {
-    background-color: $veryLightGray;
-    background-color: black;
-    @include breakpoint-up(large){
-        display:flex;
-        align-items: center;
+    background-color: hsl(0, 0%, 98%);
+    .container {
+        @include breakpoint-up(large){
+            display:flex;
+            align-items: center;
+        }
     }
     
     &__image {
@@ -15,54 +16,106 @@
         min-height: 17.5rem;
         
         @include breakpoint-up(large){
-            flex:2;
+            flex: 3;
             order: 2;
             height: 41rem;
-            background-image: url('/projects/frontendMentor/Easybank/images/bg-intro-desktop.svg');
-            background-position: left center;
+            background-image: none;
+        }
+        
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url('/projects/frontendMentor/Easybank/images/image-mockups.png');
+            background-size: 93%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+        
+        @include breakpoint-up(large) {
+            &::before {
+                height: 111%;
+                width: 185%;
+                background-image: url('/projects/frontendMentor/Easybank/images/bg-intro-desktop.svg');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                left: 0%;
+            }
+            
+            &::after {
+                content: "";
+                position: absolute;
+                height: 120%;
+                width: 125%;
+                background-image: url('/projects/frontendMentor/Easybank/images/image-mockups.png');
+                background-size: 92%;
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                left: 23%;
+                // opacity: 0;
+            }
         }
 
-    &::before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background-image: url('/projects/frontendMentor/Easybank/images/image-mockups.png');
-        background-size: 93%;
-        background-repeat: no-repeat;
-        background-position: center bottom;
-        }
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     height: 106%;
+        //     width: 160%;
+        //     background-image: url('/projects/frontendMentor/Easybank/images/bg-intro-desktop.svg');
+        //     background-size: 110%;
+        //     background-repeat: no-repeat;
+        //     background-position: center bottom;
+        //     left: 13%;
+        // }
+
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     height: 139%;
+        //     width: 116%;
+        //     background-image: url('/projects/frontendMentor/Easybank/images/image-mockups.png');
+        //     background-size: contain;
+        //     background-repeat: no-repeat;
+        //     background-position: center bottom;
+        //     left: 28%;
+        //     top: -18%;
+        //     z-index: 3;
+        // }
+
     }
     &__text {
         text-align: center;
         
         @include breakpoint-up(large){
-            flex:1;
+            flex: 2;
             order: 1;
             text-align: left;
         }
-
+        
         h1 {
             font-weight: 300;
             line-height: 1.15;
             font-size: 2.31rem;
             color: $darkBlue;
             margin-bottom: 1.5rem;
-
+            
             @include breakpoint-up(large){
                 font-size: $fontXlg;
             }
-
+            
         }
         p {
             line-height: 1.5;
             font-size: 1rem;
             margin-bottom: 2.25rem;
-
+            
             @include breakpoint-up(large){
                 font-size: $fontMsmall;
             }
-
+            
         }
     }
+
 }
