@@ -14,8 +14,12 @@
         background-repeat: no-repeat;
         background-position: center center;
         min-height: 17.5rem;
+
+        @include breakpoint-up(medium) {
+            min-width: 25rem;
+        }
         
-        @include breakpoint-up(large){
+        @include breakpoint-up(large) {
             flex: 3;
             order: 2;
             height: 41rem;
@@ -31,20 +35,29 @@
             background-size: 93%;
             background-repeat: no-repeat;
             background-position: center bottom;
-        }
-        
-        @include breakpoint-up(large) {
-            &::before {
-                height: 111%;
-                width: 185%;
-                background-image: url('/projects/frontendMentor/Easybank/images/bg-intro-desktop.svg');
-                background-size: 100%;
-                background-repeat: no-repeat;
-                background-position: center bottom;
-                left: 0%;
+ 
+            @include breakpoint-up(medium) {
+                background-position: center 60%;
+                background-size: 60%;
             }
-            
-            &::after {
+            @include breakpoint-up(large) {
+                    height: 111%;
+                    width: 185%;
+                    background-image: url('/projects/frontendMentor/Easybank/images/bg-intro-desktop.svg');
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center bottom;
+                    left: 0%;
+            }
+        }
+
+        &::after {
+            @include breakpoint-up(medium) {
+                background-size: 32%;
+
+
+            }
+            @include breakpoint-up(large) {
                 content: "";
                 position: absolute;
                 height: 120%;
@@ -54,36 +67,8 @@
                 background-repeat: no-repeat;
                 background-position: center bottom;
                 left: 23%;
-                // opacity: 0;
             }
         }
-
-        // &::before {
-        //     content: "";
-        //     position: absolute;
-        //     height: 106%;
-        //     width: 160%;
-        //     background-image: url('/projects/frontendMentor/Easybank/images/bg-intro-desktop.svg');
-        //     background-size: 110%;
-        //     background-repeat: no-repeat;
-        //     background-position: center bottom;
-        //     left: 13%;
-        // }
-
-        // &::after {
-        //     content: "";
-        //     position: absolute;
-        //     height: 139%;
-        //     width: 116%;
-        //     background-image: url('/projects/frontendMentor/Easybank/images/image-mockups.png');
-        //     background-size: contain;
-        //     background-repeat: no-repeat;
-        //     background-position: center bottom;
-        //     left: 28%;
-        //     top: -18%;
-        //     z-index: 3;
-        // }
-
     }
     &__text {
         text-align: center;
@@ -102,7 +87,7 @@
             margin-bottom: 1.5rem;
             
             @include breakpoint-up(large){
-                font-size: $fontXlg;
+                font-size: $fontXXlg;
             }
             
         }

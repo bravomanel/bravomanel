@@ -25,5 +25,3 @@ btnHamburguer.addEventListener('click', function(){
         });
     }
 });
-
-// document.getElementById("heroColor").style.backgroundColor = 'hsl(0, 0%, 98%)';
