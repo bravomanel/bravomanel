@@ -1,36 +1,74 @@
 .feature {
-    background-color: hsl(220, 16%, 96%);
-    text-align: center;
-    &__grid {
+    background-color: $lightGrayishBlue;
 
+    &__intro {
+        text-align: center;
+        @include breakpoint-up(medium){
+            text-align: left;
+        }
+        @include breakpoint-up(large){
+            width: 55%;
+            margin-bottom: 3.75rem;
+        }
+
+    }
+
+    &__grid {
+        
         @include breakpoint-up(medium) {
             display: flex;
             flex-wrap: wrap;
         }
     }
-
+    
     &__item {
         // border: 1px solid red;
+        text-align: center;
         padding: 0.9375rem;
 
         @include breakpoint-up(medium) {
             flex: 1 0 50%;    
+            text-align: left;
         }
 
         @include breakpoint-up(large) {
             flex: 1;
+        }    
+    }
+
+    &__icon {
+
+        margin-bottom: 1.875rem;
+
+        @include breakpoint-up(large) {
+            margin-bottom: 2.75rem;
+        }
+
+    }
+
+    &__title {
+        margin-bottom: 1.25rem;
+
+        @include breakpoint-up(large) {
+            margin-bottom: 1rem;
+        }
+        
+        h3 {
+            font-size: $fontMed;
+            color: $darkBlue;
+            line-height: 1.15;
+            font-weight: 300;
+            
+            @include breakpoint-up(large) {
+                font-size: $fontLg;
+            }
         }
     }
 
-    // &__icon {
-
-    // }
-
-    // &__title {
-
-    // }
-
-    // &__description {
-
-    // }
+    &__description {
+        p {
+            font-size: $fontMsmall;
+            line-height: 1.5em;
+        }
+    }
 }
