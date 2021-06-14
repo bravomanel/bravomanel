@@ -1,0 +1,90 @@
+.articles {
+    background-color: $veryLightGray;
+}
+
+.article {
+    // &__content {
+        
+        // }
+        
+        &__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.875rem;
+            
+            @include breakpoint-up(medium){
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include breakpoint-up(large){
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        &__item {
+            border-radius: .4375rem;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0rem .1875rem .75rem rgba(0,0,0,0.15);
+
+            &:hover {
+                transform: scale(1.05);
+                transition: all 150ms ease-in-out;
+            }
+            
+        }
+        
+        &__image {
+            height: 12.5rem;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            
+        }
+        
+        &__text {
+            color: $grayishBlue;
+            padding: 1rem 2rem 0 1.75rem; 
+            
+            @include breakpoint-up(medium){
+                padding: 1rem 2rem 0 1.5rem;
+            }
+        }
+        
+        &__author {
+            h4 {
+                font-size: $fontXsmall;
+                font-weight: 100;
+                margin-bottom: 0.7rem;
+            }
+            &:hover {
+                transform: scale(1.03);
+                transition: all 100ms ease-in-out;
+            }
+        }
+        
+        &__title {
+            h3{
+                font-size: 1.0625rem;
+                font-weight: 400;
+                color: $darkBlue;
+                margin-bottom: 0;
+                
+                &:hover {
+                    color: $limeGreen;
+                    transition: all 100ms ease-in-out;
+                }
+                
+            }
+            
+        }
+        
+        &__description {
+            p {
+                font-size: $fontSS;
+                word-spacing: normal;
+                line-height: 1.25rem;
+                margin-top: .5rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
