@@ -174,3 +174,17 @@ button, .button {
         display: none;
     }
 }
+
+.attribution {
+    font-size: $fontMsmall;
+    background-color: red;
+    color: black;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    a{
+        text-decoration: underline;
+        color: black;
+    }
+}

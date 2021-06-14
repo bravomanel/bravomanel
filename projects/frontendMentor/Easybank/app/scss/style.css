@@ -364,6 +364,20 @@ button:hover, .button:hover {
   }
 }
 
+.attribution {
+  font-size: 1rem;
+  background-color: red;
+  color: black;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.attribution a {
+  text-decoration: underline;
+  color: black;
+}
+
 .header {
   z-index: 1;
 }
@@ -695,8 +709,8 @@ button:hover, .button:hover {
 .footer {
   background-color: #2d314d;
   color: white;
-  text-align: center;
   padding: 2.5rem;
+  text-align: center;
 }
 
 @media (min-width: 64em) {
@@ -708,6 +722,7 @@ button:hover, .button:hover {
     -ms-grid-rows: 1fr auto;
         grid-template-rows: 1fr auto;
         grid-template-areas: "logo col1 col2 cta" "social col1 col2 copyright";
+    gap: 1rem;
     justify-items: start;
   }
 }
@@ -718,7 +733,7 @@ button:hover, .button:hover {
 
 @media (max-width: 63.9375em) {
   .footer__logo {
-    padding-bottom: 1.8rem;
+    padding-bottom: 1.875rem;
   }
 }
 
@@ -730,12 +745,13 @@ button:hover, .button:hover {
 
 @media (max-width: 63.9375em) {
   .footer__social {
-    padding-bottom: 1.8rem;
+    padding-bottom: 1.875rem;
   }
 }
 
 .footer__social a {
   display: inline-block;
+  height: 1.25rem;
 }
 
 .footer__social a svg path {
@@ -754,6 +770,9 @@ button:hover, .button:hover {
 @media (min-width: 64em) {
   .footer__social {
     grid-area: social;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
   }
 }
 
@@ -791,17 +810,6 @@ button:hover, .button:hover {
 }
 
 @media (min-width: 64em) {
-  .footer__links {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-  }
-}
-
-@media (min-width: 64em) {
   .footer .col1 {
     grid-area: col1;
   }
@@ -819,23 +827,18 @@ button:hover, .button:hover {
   }
 }
 
-.footer__cta .button {
-  margin-top: .75rem;
-  margin-bottom: 2rem;
-}
-
-@media (max-width: 63.9375em) {
-  .footer__cta {
-    padding-bottom: 1.8rem;
-  }
-}
-
 @media (min-width: 64em) {
   .footer__cta {
     grid-area: cta;
     -ms-grid-column-align: end;
         justify-self: end;
     text-align: right;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .footer__cta {
+    padding-bottom: 1.8rem;
   }
 }
 
