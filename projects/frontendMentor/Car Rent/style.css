@@ -1,0 +1,135 @@
+html {
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 95%);
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    max-width: 70rem;
+    margin: 20vh auto;
+}
+
+.container h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 3rem;
+    color: hsl(0, 0%, 95%);
+}
+
+.container p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.125rem;
+    color: hsla(0, 0%, 100%, 0.75);
+    padding-bottom: 7rem;
+    line-height: 1.5;
+}
+
+/* Sedans */
+.sedans {
+    border-bottom-left-radius: .5rem;
+    border-top-left-radius: .5rem;
+    background-color: hsl(31, 77%, 52%);
+    padding: 3rem;
+}
+
+.sedans a {
+    color: hsl(31, 77%, 52%);
+    transition: all 150ms;
+}
+.sedans a:hover {
+    background-color: hsl(31, 77%, 52%);
+}
+
+
+/* SUVs */
+.suvs {
+    background-color: hsl(184, 100%, 22%);
+    padding: 3rem;
+}
+.suvs a {
+    color: hsl(184, 100%, 22%);
+    transition: all 150ms;
+}
+.suvs a:hover {
+    background-color: hsl(184, 100%, 22%);
+}
+
+
+/* Luxury */
+.luxury {
+    border-bottom-right-radius: .5rem;
+    border-top-right-radius: .5rem;
+    background-color: hsl(179, 100%, 13%);
+    padding: 3rem;
+}
+
+.luxury a {
+    color:hsl(179, 100%, 13%);
+    transition: all 150ms;
+}
+.luxury a:hover {
+    background-color:hsl(179, 100%, 13%);
+}
+
+
+/* Button */
+.button {
+    font-size: 1.25rem;
+    font-family: 'Lexend Deca', sans-serif;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background-color: hsl(0, 0%, 95%);
+}
+
+.button:hover {
+    color: hsl(0, 0%, 95%);
+    border: solid 2px hsl(0, 0%, 95%);
+}
+
+
+/* Mobile - 375px and 720px */
+@media screen and (max-width: 67rem) {
+    body {
+        overflow: visible;
+    }
+    .container {
+        flex-direction: column;
+        max-width: 70vw;
+        margin: 4rem auto;
+    }
+    .container p {
+        padding-bottom: 2rem;
+    }
+    .sedans {
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+        border-bottom-left-radius: 0;
+    }
+    .luxury {
+        border-bottom-left-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+        border-top-right-radius: 0;
+    }
+}
+
+@media screen and (max-width: 55rem) {
+    .container {
+        flex-direction: column;
+        max-width: 80vw;
+        margin: 4rem auto;
+    }
+}
+@media screen and (max-width: 40rem) {
+    .container {
+        flex-direction: column;
+        max-width: 90vw;
+        margin: 4rem auto;
+    }
+}
