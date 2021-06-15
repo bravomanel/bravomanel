@@ -1,0 +1,94 @@
+body {
+  background-image: url("https://cdn.musebycl.io/2020-08/listening-anxiety.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-family: 'Cabin', sans-serif;
+  margin: auto 16%;
+  text-align: center;
+  line-height: 1.6em;
+}
+p {
+  font-size: 1.6em;
+  font-family: 'Cabin', sans-serif;
+  margin: auto auto;
+  max-width: 35em;
+  text-align: center;
+  line-height: 1em;
+}
+
+
+#survey-form {
+  line-height: 2em;
+  font-family: 'Quattrocento', serif;
+  font-size: 1.8em;
+  margin: 0 auto;
+  max-width: 30em;
+  background-color: rgba(240,217,186,.6);
+  border-radius: 50px;
+}
+@media only screen and (max-width:62em) {
+  #survey-form {
+    font-size: 1.6em;
+  }
+}
+
+#flexbox {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#email, #name, #number {
+  max-width: 19em;
+  width: 100%;
+  height: 1.5em;
+  padding: .4em;
+  font-family: 'Cabin', sans-serif;
+  font-size: .7em;
+}
+
+#number {
+  width: 3em;
+}
+#genderDiv {
+  display: flex;
+  flex-direction:  column;
+}
+
+#dropdownDiv {
+  line-height: 1.3em;
+}
+#dropdown {
+  max-width: 30em;
+  width: 100%;
+  height: 2em;
+  padding: .4em;
+  font-family: 'Cabin', sans-serif;
+  font-size: .7em;
+}
+
+#comments {
+  text-align: center;
+  font-family:  'Cabin', sans-serif;
+}
+textarea {
+  font-family:  'Cabin', sans-serif;
+}
+#submitDiv {
+  display: flex;
+  justify-content: center;
+}
+#submit {
+  width: 30em;
+  height: 2.6em;
+  background-color:white ;
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.5;
+  margin-bottom: 10em;
+}
+
+
