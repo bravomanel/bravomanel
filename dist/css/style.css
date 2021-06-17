@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: monospace;
+  font-family: 'Cutive Mono', monospace;
   font-size: 1.5rem;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -44,9 +44,9 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1rem 0rem;
-  background: #e7e7e7;
+  background: #b9b9b9;
   z-index: 5;
-  border-bottom: 2px black solid;
+  border-bottom: 2px solid red;
 }
 
 nav a, nav a:visited {
@@ -90,12 +90,251 @@ body {
   width: 100vw;
 }
 
+.aboutme {
+  background: #232323;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
 .text {
   text-align: left;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 2rem;
+  white-space: nowrap;
+  width: 20em;
+}
+
+.line1 {
+  overflow: hidden;
+  border-right: 2px solid #232323;
+  width: 7.85em;
+}
+
+.line2 {
+  overflow: hidden;
+  border-right: 2px solid #232323;
+  width: 19.35em;
+}
+
+.line3 {
+  overflow: hidden;
+  border-right: 2px solid #232323;
+  width: 12.1em;
+}
+
+.line4 {
+  overflow: hidden;
+  border-right: 2px solid #232323;
+  width: 17.45em;
+}
+
+.line5 {
+  overflow: hidden;
+  border-right: 2px solid #232323;
+  width: 17em;
+}
+
+.line1 {
+  -webkit-animation: type1 1.04s steps(13) 2s 1 normal both, textCursor 1.04s 2s 1, blinkTextCursor 1s 0s 2;
+          animation: type1 1.04s steps(13) 2s 1 normal both, textCursor 1.04s 2s 1, blinkTextCursor 1s 0s 2;
+}
+
+.line2 {
+  -webkit-animation: type2 2.56s steps(32) 3.04s 1 normal both, textCursor 2.56s 3.04s 1;
+          animation: type2 2.56s steps(32) 3.04s 1 normal both, textCursor 2.56s 3.04s 1;
+}
+
+.line3 {
+  -webkit-animation: type3 1.6s steps(20) 5.6s 1 normal both, textCursor 1.6s 5.6s 1;
+          animation: type3 1.6s steps(20) 5.6s 1 normal both, textCursor 1.6s 5.6s 1;
+}
+
+.line4 {
+  -webkit-animation: type4 2.32s steps(29) 7.2s 1 normal both, textCursor 2.32s 7.2s 1;
+          animation: type4 2.32s steps(29) 7.2s 1 normal both, textCursor 2.32s 7.2s 1;
+}
+
+.line5 {
+  -webkit-animation: type5 2.32s steps(29) 9.52s 1 normal both, textCursor 2.32s 9.52s 1, blinkTextCursor 1s steps(13) 11.84s infinite;
+          animation: type5 2.32s steps(29) 9.52s 1 normal both, textCursor 2.32s 9.52s 1, blinkTextCursor 1s steps(13) 11.84s infinite;
+}
+
+@-webkit-keyframes textCursor {
+  0% {
+    border-right-color: #232323;
+  }
+  1% {
+    border-right-color: white;
+  }
+  99% {
+    border-right-color: white;
+  }
+  100% {
+    border-right-color: #232323;
+  }
+}
+
+@keyframes textCursor {
+  0% {
+    border-right-color: #232323;
+  }
+  1% {
+    border-right-color: white;
+  }
+  99% {
+    border-right-color: white;
+  }
+  100% {
+    border-right-color: #232323;
+  }
+}
+
+@-webkit-keyframes blinkTextCursor {
+  0% {
+    border-right-color: #232323;
+  }
+  1% {
+    border-right-color: #232323;
+  }
+  2% {
+    border-right-color: white;
+  }
+  51% {
+    border-right-color: white;
+  }
+  52% {
+    border-right-color: #232323;
+  }
+  100% {
+    border-right-color: #232323;
+  }
+}
+
+@keyframes blinkTextCursor {
+  0% {
+    border-right-color: #232323;
+  }
+  1% {
+    border-right-color: #232323;
+  }
+  2% {
+    border-right-color: white;
+  }
+  51% {
+    border-right-color: white;
+  }
+  52% {
+    border-right-color: #232323;
+  }
+  100% {
+    border-right-color: #232323;
+  }
+}
+
+@-webkit-keyframes type1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 7.9em;
+  }
+}
+
+@keyframes type1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 7.9em;
+  }
+}
+
+@-webkit-keyframes type2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 19.35em;
+  }
+}
+
+@keyframes type2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 19.35em;
+  }
+}
+
+@-webkit-keyframes type3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 12.1em;
+  }
+}
+
+@keyframes type3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 12.1em;
+  }
+}
+
+@-webkit-keyframes type4 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17.45em;
+  }
+}
+
+@keyframes type4 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17.45em;
+  }
+}
+
+@-webkit-keyframes type5 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17em;
+  }
+}
+
+@keyframes type5 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17em;
+  }
+}
+
+.contact {
+  background-color: #232323;
 }
 /*# sourceMappingURL=style.css.map */
