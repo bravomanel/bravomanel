@@ -6,28 +6,40 @@
 
         <title>Emanuel Bravo Portfolio</title>
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/dist/css/style.css">
         <link rel="icon" type="image/png" sizes="32x32" href="images/verde.svg">
     </head>
     <body>
         <header>
+            <div class="navcontainer">
             <nav class="navbar">
-                <div class="directions">
-                    <a href="#">Projects</a>
-                    <a href="#">About Me</a>
-                    <a href="#">Contact</a>
-                </div>
-                <h1>Emanuel Bravo</h1>
-                <div class="social">
-                    <a href="https://www.facebook.com/emanuel.bravo.54" target="_blank"><img src="images/facebook.svg" alt="Facebook"></a>
-                    <a href="https://www.instagram.com/bravo_manel/" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a>
-                    <a href="https://github.com/Emanuel-Bravo" target="_blank"><img src="images/github.svg" alt="Github"></a>
-                    <a href="https://www.reddit.com/user/emanuelbravo" target="_blank"><img src="images/reddit.svg" alt="Github"></a>
-                </div>
-            </nav>
+                    <div class="directions">
+                        <a href="#aboutme">About Me</a>
+                        <a href="#">Projects</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <h1>Emanuel Bravo</h1>
+                    <div class="social">
+                        <a href="https://www.facebook.com/emanuel.bravo.54" target="_blank"><img src="images/facebook.svg" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/bravo_manel/" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a>
+                        <a href="https://github.com/Emanuel-Bravo" target="_blank"><img src="images/github.svg" alt="Github"></a>
+                        <a href="https://www.reddit.com/user/emanuelbravo" target="_blank"><img src="images/reddit.svg" alt="Github"></a>
+                    </div>
+                </nav>
+            </div>
         </header>
 
-        <div class="frontend projects">
+        <div class="aboutme window" id="aboutme">
+            <div class="text">
+                <h3>Emanuel Bravo</h3>
+                <h3>21 Years Old from Rio de Janeiro</h3>
+                <h3>Eletronic Technician</h3>
+                <h3>Desire to change the world...</h3>
+                <h3>Or at least my street.</h3>
+            </div>
+        </div>
+
+        <div class="frontend projects window">
             <h2>Frontend Mentor Challenges</h2>
             <a href="projects/frontendMentor/Stats Preview Card Component/index.html" target="_blank">Preview Card</a>
             <a href="projects/frontendMentor/Easybank/index.html" target="_blank">Easybank</a>
@@ -35,7 +47,7 @@
             <a href="projects/frontendMentor/Profile Card/index.html" target="_blank">Profile Card</a>
         </div>
 
-        <div class="freecodecamp projects">
+        <div class="freecodecamp projects window">
             <h2>Free Code Camp</h2>
             <a href="projects/FreeCodeCamp/Tribute Page/main.html" target="_blank">A Tribute to the King</a>
             <a href="projects/FreeCodeCamp/Landing Page/index.html" target="_blank">Grado Store</a>
@@ -44,10 +56,14 @@
             <a href="projects/FreeCodeCamp/Personal Portfolio/index.html" target="_blank">Personal Portfolio</a>
         </div>
 
-        <div class="mdn projects">
+        <div class="mdn projects window">
             <h2>Mozilla Developer Network</h2>
             <a href="projects/MDN/Guess the Number/guess_the_number.html" target="_blank">Guess the Number Game</a>
             <a href="projects/MDN/Silly Story Generator/index.html" target="_blank">Silly Story Generator</a>
+        </div>
+
+        <div class="contact window" id="contact">
+
         </div>
     </body>
 </html>

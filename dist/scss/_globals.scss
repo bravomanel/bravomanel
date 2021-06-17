@@ -1,0 +1,30 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: monospace;
+    font-size: 1.5rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+h1 {
+    margin: 1rem;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%)
+}
+
+.projects h2 {
+    font-size: 1.5rem;
+}
+
+.projects a {
+    color: black;
+}
+
+.projects a:visited {
+    color: black;
+}
