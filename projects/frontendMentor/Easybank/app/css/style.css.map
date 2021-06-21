@@ -4,8 +4,8 @@
     "sources": [
         "../scss/style.scss",
         "../scss/_variables.scss",
-        "../scss/mixins.scss",
-        "../scss/animations.scss",
+        "../scss/_mixins.scss",
+        "../scss/_animations.scss",
         "../scss/_article.scss",
         "../scss/_globals.scss",
         "../scss/_header.scss",
