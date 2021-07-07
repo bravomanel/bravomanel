@@ -51,15 +51,28 @@ header img {
     transform: translate(-50%, -50%);
 }
 
-main img {
-    width: 17rem;
+h6 {
+    font-size: .8rem;
+    font-weight: 300;
+    text-align: center;
+}
+span {
+    color: darkblue;
+}
+span:hover {
+    text-decoration: underline;
+}
+
+main .others {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: .8rem;
+    padding-bottom: 3rem;
 }
 
 main .others img {
     max-width: 3.25rem;
-}
-main .others {
-    font-size: .8rem;
 }
 
 main .others a {
@@ -70,6 +83,65 @@ main .others a:hover {
     text-decoration: underline;
 }
 
+.btns {
+    padding: 2rem;
+    align-content: center;
+    text-align: center;
+}
+.button {
+    padding: .5rem 1rem;
+    background-color: rgba(240, 240, 240, 1);
+    border: none;
+}
+
+main img {
+    width: 17rem;
+    padding-left: 11.5rem;
+}
+
+main .search .bar {
+    border: 1px solid grey;
+    border-radius: 2rem;
+    width: 40rem;
+    display: flex;
+    flex-direction: row;
+}
+
+main .search .bar input {
+    border: none;
+    width: 31rem;
+    font-size: 1rem;
+    font-weight: 300;
+}
+main .search .bar input:focus {
+    outline: none;
+}
+
+main .search .bar img {
+    width: 2rem;
+    max-width: 2rem;
+    padding: .75rem 0;
+    margin: 0;
+    opacity: .5;
+}
+
+main .search .bar svg {
+    width: 1.5rem;
+    max-width: 2rem;
+    padding: .5rem;
+    padding-left: 1rem;
+    margin: 0;
+    opacity: 0.55;
+}
+
+main .search .bar svg:hover {
+    transform: scale(1.05);
+    opacity: .8;
+}
+main .search .bar img:hover {
+    transform: scale(1.02);
+    opacity: .8;
+}
 
 /* Footer */
 
@@ -82,15 +154,16 @@ footer {
 
 hr {
     /*border-top: 1px solid rgba(223, 223, 223, 0.774);*/
-    height: 2px;
-    border-width: 0;
+    height: 1px;
+    border: none;
     color: grey;
-    background-color: grey;
+    background-color: #dddddd;
 }
 
 footer h4 {
     color: rgba(100, 100, 100, 1);
-    font-weight: 300;
+    font-size: .9rem;
+    font-weight: 400;
 }
 
 footer a {
@@ -105,7 +178,7 @@ footer a:hover {
 footer .country {
     margin: auto auto;
     justify-content: center;
-    padding: 1rem;
+    padding: .9rem;
     display: flex;
 }
 
@@ -122,5 +195,5 @@ footer .about {
 }
 
 footer .about h4 {
-    padding: 1rem;
+    padding: .9rem;
 }
