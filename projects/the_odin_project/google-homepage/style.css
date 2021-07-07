@@ -23,6 +23,7 @@ header {
     top: 0;
     right: 0;
     margin: 1rem;
+    align-items: center;
 }
 
 header h2 {
@@ -33,13 +34,12 @@ header h2 {
 }
 
 header svg {
-    width: 1.75rem;
+    max-width: 1.75rem;
     opacity: .6;
     padding: .5rem;
 }
-header img {
-    max-width: 2.5rem;
-    border-radius: 5rem;
+header .account svg {
+    max-width: 3rem;
 }
 
 /* Main */
