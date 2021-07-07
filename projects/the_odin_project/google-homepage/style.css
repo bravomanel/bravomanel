@@ -1,0 +1,52 @@
+html {
+    font-size: 16px;
+    /*font-family: ;*/
+}
+
+body {
+    background-color: white;
+}
+
+
+/* Header */
+
+
+header h2 {
+    font-size: .8rem;
+    color: rgba(20, 20, 20, .75)
+}
+
+header svg {
+    width: 2rem;
+}
+header img {
+    max-width: 3rem;
+}
+
+/* Main */
+
+.container {
+    margin: auto auto;
+}
+
+main img {
+    width: 17rem;
+}
+
+main .others img {
+    max-width: 3.25rem;
+}
+main .others {
+    font-size: .8rem;
+}
+
+main .others a {
+    text-decoration: none;
+}
+
+main .others a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
