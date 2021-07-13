@@ -21,7 +21,7 @@ h1 {
 }
 h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.4rem;
     padding-bottom: 1rem;
 }
 
@@ -99,6 +99,12 @@ input {
     border: rgba(124, 124, 124, 0.486) 4px solid;
     // background-color: rgba(255, 255, 255, 0.123);
     margin: 1rem;
+}
+
+#message, #finalResult{
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 1rem;
 }
 
 
