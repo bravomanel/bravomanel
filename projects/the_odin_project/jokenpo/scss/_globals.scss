@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-image: url("images/background-paper.jpeg");
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 1rem;
+}
+
+h1 {
+    margin-top: 3rem;
+}
+
+input {
+    width: 10rem;
+}
+
+
+// Game
+
+.score {
+    display: grid;
+    grid-template-areas:
+    "score score"
+    "user pc"
+    "userscore pcscore";
+    max-width: 12rem;
+    margin: 0 auto;
+    border: 2px solid black;
+    text-align: center;
+    padding: .5rem 0;
+}
+
+.score {
+    #score {
+        grid-area: score;
+        text-align: center;
+    }
+    #user {
+        grid-area: user;
+    }
+    #pc {
+        grid-area: pc;
+    }
+    #userscore {
+        grid-area: userscore;
+    }
+    #pcscore {
+        grid-area: pcscore;
+    }
+}
+
+.game-config {
+    text-align: center;
+    justify-content: center;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding-top: 1rem;
+    p {
+        padding: .5rem;
+    }
+}
+
+.choices {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    align-content: center;
+    justify-content: center;    
+}
+
+.choices img {
+    max-width: 10rem;
+    padding: 1rem;
+}
+
+.choices figcaption {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.choice {
+    //border: black 1px solid;
+    background-color: rgba(255, 255, 255, 0.123);
+    margin: 1rem;
+}
+
+
+// Footer
+.text {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100vw;
+    background-color: red;
+
+    p {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 65rem;
+        padding: .5rem;
+    }
+}

@@ -3,6 +3,8 @@ let r = "Rock";
 let p = "Paper";
 let s = "Scissors";
 
+// Messages
+
 let won = "You Won!!"
 let tied = "Play Again!"
 let lose = "You Lose."
@@ -41,15 +43,7 @@ function computerPlay () {
 
 function play() {
 
-    let choice = prompt(`Jokenpo Game\nPlease write Paper, Rock or Scissors to play`);
-
-    low = choice.toLowerCase();
-    user = low[0].toUpperCase() + low.slice(1);
-
-    if (user == "Rock" || user == "Paper" || user == "Scissors") {
-    } else {
-        return alert("Please write again, choose 'Rock', 'Paper' or 'Scissors' !!");
-    }
+    //let choice = prompt(`Jokenpo Game\nPlease write Paper, Rock or Scissors to play`);
 
     let pc = computerPlay();
 
@@ -81,8 +75,25 @@ function play() {
 
     let message = `Computer played ${pc}, ${battle(user, pc)}, ${winner(user, pc)}`;
     alert(message);
+    console.log(message);
     return message;
 }
 
 
-play();
+
+let paper_image = document.getElementById("paper")
+let rock_image = document.getElementById("rock")
+let scissors_image = document.getElementById("scissors")
+
+paper_image.addEventListener('click', function() {
+    user = p;
+    play();
+})
+rock_image.addEventListener('click', function() {
+    user = r;
+    play();
+})
+scissors_image.addEventListener('click', function() {
+    user = s;
+    play();
+})

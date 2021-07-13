@@ -4,9 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
     <title>Jokenpô</title>
 </head>
 <body>
+    <header>
+        <h1>Jokenpô Game</h1>
+        <h2>じゃんけんぽん</h2>
+    </header>
+
+    <div class="game-config">
+        <label for="matches">Nº of Matches:</label>
+        <input type="number" id="matches">
+        <input type="button" value="Play">
+    </div>
+
+    <div class="score">
+        <h3 id="score">Score</h3>
+        <h3 id="user">User</h3>
+        <h3 id="pc">Machine</h3>
+        <h3 id="userscore">0</h3>
+        <h3 id="pcscore">0</h3>
+    </div>
+
+    <div class="choices">
+        <div class="rock choice">
+            <img src="images/rock.png" id="rock" alt="Rock">
+            <figcaption>Rock</figcaption>
+        </div>
+        <div class="paper choice">
+            <img src="images/paper.png" id="paper" alt="Paper">
+            <figcaption>Paper</figcaption>
+        </div>
+        <div class="scissors choice">
+            <img src="images/scissors.png" id="scissors" alt="Scissors">
+            <figcaption>Scissors</figcaption>
+        </div>
+    </div>
+
+    <footer>
+        <div class="text">
+            <p>This is a regular Paper, Rock, Scissors game, developed by 
+            <a href="https://emanuel-bravo.github.io/" target="_blank">Emanuel Bravo</a> 
+            while learning JavaScript on 
+            <a href="https://www.theodinproject.com" target="_blank">The Odin Project</a>.</p>
+            <p>If you don't know how to play it, click <a href="#">here</a></p>
+        </div>
+    </footer>
     
 <script src="script.js"></script>
 </body>
