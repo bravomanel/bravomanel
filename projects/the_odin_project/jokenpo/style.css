@@ -9,24 +9,30 @@ html {
 
 body {
   background-image: url("images/background-paper.jpeg");
-}
-
-h1, h2 {
-  text-align: center;
-  margin: 1rem;
+  font-family: 'Uchen', serif;
 }
 
 h1 {
-  margin-top: 3rem;
+  text-align: center;
+  margin: 0rem;
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 1rem;
 }
 
 input {
-  width: 10rem;
+  width: 3rem;
 }
 
 .score {
+  display: -ms-grid;
   display: grid;
-  grid-template-areas: "score score" "user pc" "userscore pcscore";
+      grid-template-areas: "score score" "user pc" "userscore pcscore";
   max-width: 12rem;
   margin: 0 auto;
   border: 2px solid black;
@@ -35,44 +41,51 @@ input {
 }
 
 .score #score {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: score;
   text-align: center;
 }
 
 .score #user {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: user;
 }
 
 .score #pc {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: pc;
 }
 
 .score #userscore {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: userscore;
 }
 
 .score #pcscore {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
   grid-area: pcscore;
 }
 
-.game-config {
-  text-align: center;
-  justify-content: center;
-  max-width: 50rem;
-  margin: 0 auto;
-  padding-top: 1rem;
-}
-
-.game-config p {
-  padding: .5rem;
-}
-
 .choices {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: 1rem;
-  align-content: center;
-  justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .choices img {
@@ -86,7 +99,7 @@ input {
 }
 
 .choice {
-  background-color: rgba(255, 255, 255, 0.123);
+  border: rgba(124, 124, 124, 0.486) 4px solid;
   margin: 1rem;
 }
 
@@ -94,9 +107,12 @@ input {
   position: fixed;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 100vw;
   background-color: red;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
 }
 
 .text p {

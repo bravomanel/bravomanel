@@ -3,13 +3,17 @@ let r = "Rock";
 let p = "Paper";
 let s = "Scissors";
 
+//Score 
+userScoreHolder = document.getElementById('userScoreHolder');
+pcScoreHolder = document.getElementById('pcScoreHolder');
+userScore = 0;
+pcScore = 0;
+
 // Messages
 
 let won = "You Won!!"
 let tied = "Play Again!"
 let lose = "You Lose."
-
-//Battle
 
 let RxS = "Rock crushes Scissors";
 let PxR = "Paper covers Rocks";
@@ -18,8 +22,8 @@ let tie = "You tied";
 
 let outro = "please write again"
 
-// Computer Play
 
+    // Computer Play
 function computerPlay () {
     /* Math random logic: 
         min = Math.ceil(min);
@@ -38,45 +42,53 @@ function computerPlay () {
     }
 }
 
+    // The Battle 
+function battle(user, pc) {
+    if (user == pc) {
+        return tie;
+    } else if (user == r && pc == s || user == s && pc == r ) {
+        return RxS;
+    } else if (user == p && pc == r || user == r && pc == p ) {
+        return PxR;
+    } else if (user == s && pc == p || user == p && pc == s ) {
+        return SxP;
+    }
+}
+
+    // The Winner
+function winner(user, pc) {
+    if (user == r && pc == s || user == p && pc == r || user == s && pc == p) {
+        userScore++;
+        return won;
+    } else if (user == pc) {
+        return tied;
+    } else { 
+        pcScore++;
+        return lose;
+    }
+}
+
+    // Reset
+function reset() {
+    userScore = 0;
+    pcScore = 0;
+
+}
 
  // The Game
 
 function play() {
 
-    //let choice = prompt(`Jokenpo Game\nPlease write Paper, Rock or Scissors to play`);
-
     let pc = computerPlay();
 
-    // The Battle 
-
-    function battle(user, pc) {
-        if (user == pc) {
-            return tie;
-        } else if (user == r && pc == s || user == s && pc == r ) {
-            return RxS;
-        } else if (user == p && pc == r || user == r && pc == p ) {
-            return PxR;
-        } else if (user == s && pc == p || user == p && pc == s ) {
-            return SxP;
-        }
-    }
-
-    // The Winner
-
-    function winner(user, pc) {
-        if (user == r && pc == s || user == p && pc == r || user == s && pc == p) {
-            return won;
-        } else if (user == pc) {
-            return tied;
-        } else { 
-            return lose;
-        }
-    }
-
     let message = `Computer played ${pc}, ${battle(user, pc)}, ${winner(user, pc)}`;
+
+    userScoreHolder.appendChild(userScore);
+    pcScoreHolder.appendChild(pcScore);
+
     alert(message);
+    console.log(userScore, pcScore);
     console.log(message);
-    return message;
 }
 
 

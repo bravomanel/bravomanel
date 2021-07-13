@@ -9,19 +9,24 @@ html {
 
 body {
     background-image: url("images/background-paper.jpeg");
+    font-family: 'Uchen', serif;
 }
 
-h1, h2 {
-    text-align: center;
-    margin: 1rem;
-}
 
 h1 {
-    margin-top: 3rem;
+    text-align: center;
+    margin: 0rem;
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 1rem;
 }
 
 input {
-    width: 10rem;
+    width: 3rem;
 }
 
 
@@ -59,16 +64,18 @@ input {
     }
 }
 
-.game-config {
-    text-align: center;
-    justify-content: center;
-    max-width: 50rem;
-    margin: 0 auto;
-    padding-top: 1rem;
-    p {
-        padding: .5rem;
-    }
-}
+// .game-config {
+//     text-align: center;
+//     justify-content: center;
+//     max-width: 50rem;
+//     margin: 0 auto;
+//     padding: 1rem;
+
+//     font-size: 1.25rem;
+//     p {
+//         padding: .5rem;
+//     }
+// }
 
 .choices {
     display: flex;
@@ -89,8 +96,8 @@ input {
 }
 
 .choice {
-    //border: black 1px solid;
-    background-color: rgba(255, 255, 255, 0.123);
+    border: rgba(124, 124, 124, 0.486) 4px solid;
+    // background-color: rgba(255, 255, 255, 0.123);
     margin: 1rem;
 }
 
@@ -104,6 +111,9 @@ input {
 
     width: 100vw;
     background-color: red;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
 
     p {
         text-align: center;

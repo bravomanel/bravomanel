@@ -721,7 +721,7 @@ button:hover, .button:hover {
         grid-template-columns: repeat(3, 1fr), 2fr;
     -ms-grid-rows: 1fr auto;
         grid-template-rows: 1fr auto;
-        grid-template-areas: "logo col1 col2 cta" "social col1 col2 copyright";
+        grid-template-areas: "logo col1 col2 cta" "social col1 col2 copyright";
     gap: 1rem;
     justify-items: start;
   }
