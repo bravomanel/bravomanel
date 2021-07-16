@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #dfdfdf;
+}
+
+.container {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-15rem);
+          transform: translate(-15rem);
+}
+
+.sidebar {
+  padding: 1rem;
+  float: left;
+  height: 28rem;
+  width: 15rem;
+  border: 2px solid red;
+}
+
+.sidebar .configs {
+  font-size: 2rem;
+}
+
+.slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  height: 1rem;
+  background-color: white;
+  outline: none;
+  opacity: .70;
+  -webkit-transition: .2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  border-radius: 1rem;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 1rem;
+  /* Set a specific slider handle width */
+  height: 1rem;
+  /* Slider handle height */
+  border-radius: 1rem;
+  background: black;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 1rem;
+  /* Set a specific slider handle width */
+  height: 1rem;
+  /* Slider handle height */
+  border-radius: 1rem;
+  background: black;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.title {
+  font-family: 'Shadows Into Light', cursive;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title h1 {
+  font-size: 4rem;
+  margin-top: 2rem;
+}
+
+.title h3 {
+  font-size: 1.75rem;
+  padding-top: .75rem;
+  font-family: 'Zen Loop', cursive;
+}
+
+#mainGrid {
+  width: 30rem;
+  height: 30rem;
+  border: black 2px solid;
+  position: absolute;
+}
+
+.gridRows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.divPixel {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid black;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
