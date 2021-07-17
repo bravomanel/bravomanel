@@ -24,12 +24,26 @@
     </header>
 
     <div class="sidebar">
-        <button type="reset">Resetar</button>
-        <input type="range" min="2" max ="100" value="16" class="slider" id="gridSizeSlider">
-        <p id="slideShow">16</p>
-        <!-- create slider for width and height -->
-        <!-- button for reset -->
-        <!-- select color -->
+        <h4 id="adjustment">Adjustment</h4>
+
+        <div class="size">
+            <p>Display Density:</p>
+            <input type="range" min="8" max ="84" value="16" class="slider" id="gridSizeSlider">
+            <p id="slideShow">16</p>
+            <button type="reset" id="resetBtn" class="btnStyle">Clear Display</button>
+        </div>
+            
+        <div class="colors">
+            <p>Choose the Color:</p>
+            <button id="red" class="btnStyle btnGrid">Red</button>
+            <button id="black" class="btnStyle btnGrid">Black</button>
+            <button id="darken" class="btnStyle btnGrid">Darken</button>
+            <div class="pick">
+                <label for="chooseYours" id="chooseYoursLabel" class="colorP">Or Pick Yours:</label>
+                <input type="color" value="#000000" id="chooseYours" name="chooseYours" class="colorP"></input>
+            </div>
+        </div> 
+            <!-- select color -->
         <!-- toggle hover and press//press and hold -->
     </div>
     

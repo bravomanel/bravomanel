@@ -5,6 +5,7 @@
 
 html {
   font-size: 16px;
+  font-family: 'Zen Loop', cursive;
 }
 
 body {
@@ -14,20 +15,80 @@ body {
 .container {
   position: relative;
   left: 50%;
-  -webkit-transform: translate(-15rem);
-          transform: translate(-15rem);
+  -webkit-transform: translate(-17.5rem);
+          transform: translate(-17.5rem);
+}
+
+.title {
+  font-family: 'Shadows Into Light', cursive;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title h1 {
+  font-size: 4rem;
+  margin-top: 2rem;
+}
+
+.title h3 {
+  font-size: 1.75rem;
+  padding-top: .75rem;
+  font-family: 'Zen Loop', cursive;
+}
+
+#mainGrid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 35rem;
+  height: 35rem;
+  border: black 2px solid;
+  position: absolute;
+}
+
+.gridRows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%;
+}
+
+.divPixel {
+  width: 100%;
+  border: 0.01562rem solid rgba(180, 180, 180, 0.5);
 }
 
 .sidebar {
   padding: 1rem;
   float: left;
-  height: 28rem;
+  height: 33rem;
   width: 15rem;
-  border: 2px solid red;
+  border: 2px solid black;
 }
 
 .sidebar .configs {
   font-size: 2rem;
+}
+
+.sidebar p {
+  font-size: 1.75rem;
+  text-align: center;
+  color: #222222;
+}
+
+#adjustment {
+  font-size: 2rem;
+  text-decoration: underline;
+  text-align: center;
+  padding-bottom: 1rem;
 }
 
 .slider {
@@ -38,7 +99,7 @@ body {
   height: 1rem;
   background-color: white;
   outline: none;
-  opacity: .70;
+  opacity: 1;
   -webkit-transition: .2s;
   -webkit-transition: opacity .2s;
   transition: opacity .2s;
@@ -46,7 +107,7 @@ body {
 }
 
 .slider:hover {
-  opacity: 1;
+  opacity: .9;
 }
 
 .slider::-webkit-slider-thumb {
@@ -76,46 +137,66 @@ body {
   /* Cursor on hover */
 }
 
-.title {
-  font-family: 'Shadows Into Light', cursive;
-  text-align: center;
-  margin-bottom: 2rem;
+#slideShow {
+  font-weight: 600;
 }
 
-.title h1 {
-  font-size: 4rem;
-  margin-top: 2rem;
-}
-
-.title h3 {
+.btnStyle {
+  height: 2rem;
+  width: 100%;
+  margin: 1rem auto;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background-color: white;
+  border-radius: 2rem;
   font-size: 1.75rem;
-  padding-top: .75rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 1;
   font-family: 'Zen Loop', cursive;
+  font-weight: 700;
 }
 
-#mainGrid {
-  width: 30rem;
-  height: 30rem;
-  border: black 2px solid;
-  position: absolute;
+.btnStyle:hover {
+  opacity: .95;
+  background-color: white;
+  -webkit-box-shadow: #222222 -1px -1px 1px;
+          box-shadow: #222222 -1px -1px 1px;
 }
 
-.gridRows {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.btnGrid {
+  width: 32%;
+  max-width: 100%;
+}
+
+.pick {
+  text-align: center;
+}
+
+.colorP {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 0;
-  padding: 0;
-}
-
-.divPixel {
   width: 2rem;
   height: 2rem;
-  border: 1px solid black;
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  background-color: transparent;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0 auto;
+}
+
+#chooseYoursLabel {
   text-align: center;
+  font-size: 1.75rem;
 }
 /*# sourceMappingURL=style.css.map */
