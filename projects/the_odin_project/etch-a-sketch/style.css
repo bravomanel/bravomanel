@@ -63,7 +63,11 @@ body {
 
 .divPixel {
   width: 100%;
-  border: 0.01562rem solid rgba(180, 180, 180, 0.5);
+  border: 0.5px solid rgba(180, 180, 180, 0.5);
+}
+
+.divPixel:hover {
+  background-color: rgba(180, 180, 180, 0.5);
 }
 
 .sidebar {
@@ -84,11 +88,15 @@ body {
   color: #222222;
 }
 
-#adjustment {
+h4 {
   font-size: 2rem;
   text-decoration: underline;
   text-align: center;
-  padding-bottom: 1rem;
+  padding-bottom: .5rem;
+}
+
+#tutorial {
+  padding-bottom: .75rem;
 }
 
 .slider {
@@ -174,25 +182,24 @@ body {
   max-width: 100%;
 }
 
-.pick {
-  text-align: center;
-}
-
 .colorP {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 2rem;
-  height: 2rem;
+}
+
+#pick {
+  font-size: 1.75rem;
+  margin-left: 2rem;
+  padding: 0rem 1rem;
+  text-decoration: none;
   outline: none;
   border: none;
+  background-color: white;
   border-radius: 2rem;
-  background-color: transparent;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  margin: 0 auto;
+  font-family: 'Zen Loop', cursive;
+  font-weight: 700;
 }
 
 #chooseYoursLabel {

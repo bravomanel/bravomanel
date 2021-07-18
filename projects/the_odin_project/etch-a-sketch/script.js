@@ -2,9 +2,34 @@ let slider = document.getElementById("gridSizeSlider");
 let output = document.getElementById("slideShow")
 let mainGrid = document.getElementById("mainGrid");
 let resetBtn = document.getElementById("resetBtn");
+let color = "red";
+let penActive = false;
 let gridSize = 16;
 
+let redBtn = document.getElementById("red");
+let blackBtn = document.getElementById("black");
+let darkenBtn = document.getElementById("darken");
 
+let pickColor = document.getElementById("pickColor")
+let pickBtn = document.getElementById("pick");
+
+mainGrid.addEventListener('click', function() { activatePen()});
+
+redBtn.onclick = function() {
+    color = "red";
+}
+blackBtn.onclick = function() {
+    color = "black";
+}
+darkenBtn.onclick = function() {
+    color = "rgba(0, 0, 0, 0.1)";
+}
+pickColor.onclick = function() {
+    color = pickColor.value;
+}
+pickColor.addEventListener("input", function() {
+    color = pickColor.value;
+});
 
 
 function createArray(size) {
@@ -17,19 +42,32 @@ function createArray(size) {
             gridDiv.classList.add(`divPixel`)
             gridDiv.id = `pixel${i}x${j}`;
             gridDiv.addEventListener("mouseover", function() {
-                let pixel = document.getElementById(`pixel${i}x${j}`);
-                pixel.style.backgroundColor = "red";
+                if (penActive == true) {
+                    paint(i, j);
+                }
             });
+
             gridRow.appendChild(gridDiv);
         }
         mainGrid.appendChild(gridRow);
     }
 }
 
-function painting() {
-
+function paint(i, j) {
+    let pixel = document.getElementById(`pixel${i}x${j}`);
+    pixel.style.backgroundColor = color;
 }
-    
+
+function activatePen() {
+    if(!penActive) {
+        mainGrid.addEventListener('mouseleave', activatePen);
+        penActive = true;
+    } else {
+        mainGrid.removeEventListener('mouseleave', activatePen);
+        penActive = false;
+    }
+}
+
 function removeAllChildNodes() {
     while (mainGrid.firstChild) {
         mainGrid.removeChild(mainGrid.firstChild);
@@ -41,10 +79,10 @@ resetBtn.addEventListener("click", function () {
     createArray(slider.value);
 });
 
-createArray(gridSize);
-
 slider.oninput = function () {
     removeAllChildNodes();
     output.innerHTML = this.value;
     createArray(this.value);
 }
+
+createArray(gridSize);

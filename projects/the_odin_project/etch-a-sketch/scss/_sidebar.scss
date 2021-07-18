@@ -16,11 +16,15 @@
 
 }
 
-#adjustment {
+h4 {
     font-size: 2rem;
     text-decoration: underline;
     text-align: center;
-    padding-bottom:1rem ;
+    padding-bottom:.5rem ;
+}
+
+#tutorial {
+    padding-bottom: .75rem;
 }
 
 .slider {
@@ -91,21 +95,21 @@
     max-width: 100%;
 }
 
-.pick {
-    text-align: center;
-}
 .colorP {
     flex-direction: row;
-    width: 2rem;
-    height: 2rem;
 
+}
+#pick {
+    font-size: 1.75rem;
+    margin-left: 2rem;
+    padding: 0rem 1rem;
+    text-decoration: none;
     outline: none;
     border: none;
+    background-color: white;
     border-radius: 2rem;
-    background-color: transparent;
-    align-items: flex-end;
-
-    margin: 0 auto;
+    font-family: 'Zen Loop', cursive;
+    font-weight: 700;
 }
 
 #chooseYoursLabel {

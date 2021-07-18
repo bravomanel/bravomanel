@@ -15,5 +15,8 @@
 
 .divPixel {
     width: 100%;
-    border: 0.015625rem solid rgba(180, 180, 180, 0.5);
+    border: .5px solid rgba(180, 180, 180, 0.5);
+}
+.divPixel:hover {
+    background-color: rgba(180, 180, 180, 0.5);
 }
