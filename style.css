@@ -17,18 +17,6 @@ h1 {
           transform: translateX(50%);
 }
 
-.projects h2 {
-  font-size: 1.5rem;
-}
-
-.projects a {
-  color: black;
-}
-
-.projects a:visited {
-  color: black;
-}
-
 nav {
   position: fixed;
   top: 0;
@@ -339,6 +327,7 @@ body {
 }
 
 .projects, .project {
+  background-color: rgba(221, 221, 221, 0.75);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -354,5 +343,18 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.projects h2, .project h2 {
+  font-size: 3rem;
+}
+
+.projects a, .project a {
+  font-size: 1.75rem;
+  color: black;
+}
+
+.projects a__:visited, .project a__:visited {
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */

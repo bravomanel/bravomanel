@@ -8,7 +8,7 @@ let gridSize = 16;
 
 let redBtn = document.getElementById("red");
 let blackBtn = document.getElementById("black");
-let darkenBtn = document.getElementById("darken");
+let blueBtn = document.getElementById("blue");
 
 let pickColor = document.getElementById("pickColor")
 let pickBtn = document.getElementById("pick");
@@ -21,8 +21,8 @@ redBtn.onclick = function() {
 blackBtn.onclick = function() {
     color = "black";
 }
-darkenBtn.onclick = function() {
-    color = "rgba(0, 0, 0, 0.1)";
+blueBtn.onclick = function() {
+    color = "blue";
 }
 pickColor.onclick = function() {
     color = pickColor.value;
