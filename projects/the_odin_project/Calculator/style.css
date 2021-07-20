@@ -1,0 +1,173 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'STIX Two Math', serif;
+  background-color: #aabfc4;
+}
+
+.calculator {
+  font-size: 2.5rem;
+  width: 28rem;
+  padding: .5rem;
+  border: 0.5rem rgba(255, 255, 255, 0.712) solid;
+  border-radius: .25rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.digitsContainer {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "divide per mul subs" "seven eight nine sum" "four five six sum" "one two three equal" "zeros zeros dots equal";
+  height: 30rem;
+  width: 28rem;
+}
+
+.digitsStyle {
+  margin: .125rem;
+  border-radius: .25rem;
+  padding: 1rem;
+  padding-right: 1rem;
+  border: rgba(0, 0, 0, 0.329) 0.125rem solid;
+  text-align: center;
+}
+
+.display {
+  height: 7rem;
+  width: 27.5rem;
+  max-width: 28rem;
+  border: rgba(0, 0, 0, 0.329) 0.125rem solid;
+  border-radius: .5rem;
+  margin: .125rem;
+}
+
+.text {
+  position: absolute;
+  right: 1rem;
+  color: rgba(0, 0, 0, 0.329);
+  font-size: 3rem;
+}
+
+.subText {
+  position: absolute;
+  right: 1rem;
+  top: 6rem;
+  color: rgba(0, 0, 0, 0.329);
+  font-size: 1rem;
+}
+
+#one {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+
+#two {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+
+#three {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: three;
+}
+
+#four {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: four;
+}
+
+#five {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: five;
+}
+
+#six {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: six;
+}
+
+#seven {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: seven;
+}
+
+#eight {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: eight;
+}
+
+#nine {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: nine;
+}
+
+#zero {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: zeros;
+}
+
+#sum {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: sum;
+}
+
+#substract {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: subs;
+}
+
+#multiply {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: mul;
+}
+
+#divide {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: divide;
+}
+
+#percentage {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: per;
+}
+
+#dot {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: dots;
+}
+
+#equal {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: equal;
+}
+/*# sourceMappingURL=style.css.map */

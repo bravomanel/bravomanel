@@ -1,0 +1,102 @@
+.digitsContainer {
+    display: grid;
+    grid-template-areas:
+    "divide per mul subs"
+    "seven eight nine sum"
+    "four five six sum"
+    "one two three equal"
+    "zeros zeros dots equal";
+    height: 30rem;
+    width: 28rem;
+}
+
+.digitsStyle {
+    margin: .125rem;
+    border-radius: .25rem;
+    padding: 1rem;
+    padding-right: 1rem;
+    border: rgba(0, 0, 0, 0.329) .125rem solid;
+    text-align: center;
+}
+
+.display {
+    height: 7rem;
+    width: 27.5rem;
+    max-width: 28rem;
+    border: rgba(0, 0, 0, 0.329) .125rem solid;
+    border-radius: .5rem;
+    margin: .125rem;
+}
+
+.text {
+    position: absolute;
+    right: 1rem;
+
+    color: rgba(0, 0, 0, 0.329);
+    font-size: 3rem;
+}
+
+.subText {
+    position: absolute;
+    right: 1rem;
+    top: 6rem;
+
+    color: rgba(0, 0, 0, 0.329);
+    font-size: 1rem;
+}
+
+
+
+// Assign each digit a a grid-area indicator
+
+#one {
+    grid-area:one;
+}
+#two {
+    grid-area:two;
+}
+#three {
+    grid-area:three;
+}
+#four {
+    grid-area:four;
+}
+#five {
+    grid-area:five;
+}
+#six {
+    grid-area:six;
+}
+#seven {
+    grid-area:seven;
+}
+#eight {
+    grid-area:eight;
+}
+#nine {
+    grid-area:nine;
+}
+#zero {
+    grid-area:zeros;
+}
+#sum {
+    grid-area:sum;
+}
+#substract {
+    grid-area:subs;
+}
+#multiply {
+    grid-area:mul;
+}
+#divide {
+    grid-area:divide;
+}
+#percentage {
+    grid-area:per;
+}
+#dot {
+    grid-area:dots;
+}
+#equal {
+    grid-area:equal;
+}
