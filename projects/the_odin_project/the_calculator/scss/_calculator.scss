@@ -1,48 +1,56 @@
 .digitsContainer {
     display: grid;
     grid-template-areas:
-    "divide per mul subs"
-    "seven eight nine sum"
+    "clear divide mul backSpace"
+    "seven eight nine subs"
     "four five six sum"
     "one two three equal"
-    "zeros zeros dots equal";
-    height: 30rem;
-    width: 28rem;
+    "zeros zeros dot equal";
+    height: 28rem;
+    width: 24rem;
 }
 
 .digitsStyle {
     margin: .125rem;
-    border-radius: .25rem;
-    padding: 1rem;
-    padding-right: 1rem;
-    border: rgba(0, 0, 0, 0.329) .125rem solid;
+    border-radius: 6rem;
+    padding: .5rem 1rem;
+    // padding-right: 1rem;
+    border: $borderColor .125rem solid;
     text-align: center;
+    background-color: $calcColor;
+
+    &:hover {
+        background-color: $hoverColor;
+    }
+    &:active {
+        background-color: $activeColor;
+    }
 }
 
 .display {
     height: 7rem;
-    width: 27.5rem;
+    width: 23.5rem;
     max-width: 28rem;
-    border: rgba(0, 0, 0, 0.329) .125rem solid;
+    border: $borderColor .125rem solid;
     border-radius: .5rem;
+    background-color: $calcColor;
     margin: .125rem;
 }
 
-.text {
+#text {
     position: absolute;
     right: 1rem;
-
-    color: rgba(0, 0, 0, 0.329);
-    font-size: 3rem;
+    color: $mainColor;
+    font-size: 4rem;
 }
 
-.subText {
+#subText {
     position: absolute;
-    right: 1rem;
-    top: 6rem;
+    right: 1.25rem;
+    top: 5.5rem;
 
-    color: rgba(0, 0, 0, 0.329);
-    font-size: 1rem;
+    color: $mainColor;
+    font-size: 1.75rem;
 }
 
 
@@ -91,12 +99,15 @@
 #divide {
     grid-area:divide;
 }
-#percentage {
-    grid-area:per;
+#backSpace {
+    grid-area:backSpace;
 }
 #dot {
-    grid-area:dots;
+    grid-area:dot;
 }
 #equal {
     grid-area:equal;
+}
+#clear {
+    grid-area:clear;
 }

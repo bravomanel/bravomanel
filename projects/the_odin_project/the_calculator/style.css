@@ -9,15 +9,16 @@ html {
 
 body {
   font-family: 'STIX Two Math', serif;
-  background-color: #aabfc4;
+  background-color: #88d4e6;
 }
 
 .calculator {
   font-size: 2.5rem;
-  width: 28rem;
+  width: 24rem;
   padding: .5rem;
-  border: 0.5rem rgba(255, 255, 255, 0.712) solid;
-  border-radius: .25rem;
+  border: 0.5rem rgba(0, 0, 0, 0.35) solid;
+  border-radius: .5rem;
+  background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
   left: 50%;
   top: 50%;
@@ -28,42 +29,51 @@ body {
 .digitsContainer {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "divide per mul subs" "seven eight nine sum" "four five six sum" "one two three equal" "zeros zeros dots equal";
-  height: 30rem;
-  width: 28rem;
+      grid-template-areas: "clear divide mul backSpace" "seven eight nine subs" "four five six sum" "one two three equal" "zeros zeros dot equal";
+  height: 28rem;
+  width: 24rem;
 }
 
 .digitsStyle {
   margin: .125rem;
-  border-radius: .25rem;
-  padding: 1rem;
-  padding-right: 1rem;
-  border: rgba(0, 0, 0, 0.329) 0.125rem solid;
+  border-radius: 6rem;
+  padding: .5rem 1rem;
+  border: rgba(0, 0, 0, 0.35) 0.125rem solid;
   text-align: center;
+  background-color: #e59a4c;
+}
+
+.digitsStyle:hover {
+  background-color: rgba(229, 154, 76, 0.8);
+}
+
+.digitsStyle:active {
+  background-color: rgba(229, 154, 76, 0.7);
 }
 
 .display {
   height: 7rem;
-  width: 27.5rem;
+  width: 23.5rem;
   max-width: 28rem;
-  border: rgba(0, 0, 0, 0.329) 0.125rem solid;
+  border: rgba(0, 0, 0, 0.35) 0.125rem solid;
   border-radius: .5rem;
+  background-color: #e59a4c;
   margin: .125rem;
 }
 
-.text {
+#text {
   position: absolute;
   right: 1rem;
-  color: rgba(0, 0, 0, 0.329);
-  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 4rem;
 }
 
-.subText {
+#subText {
   position: absolute;
-  right: 1rem;
-  top: 6rem;
-  color: rgba(0, 0, 0, 0.329);
-  font-size: 1rem;
+  right: 1.25rem;
+  top: 5.5rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.75rem;
 }
 
 #one {
@@ -128,14 +138,13 @@ body {
 }
 
 #sum {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 4;
   grid-area: sum;
 }
 
 #substract {
-  -ms-grid-row: 1;
+  -ms-grid-row: 2;
   -ms-grid-column: 4;
   grid-area: subs;
 }
@@ -148,20 +157,20 @@ body {
 
 #divide {
   -ms-grid-row: 1;
-  -ms-grid-column: 1;
+  -ms-grid-column: 2;
   grid-area: divide;
 }
 
-#percentage {
+#backSpace {
   -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: per;
+  -ms-grid-column: 4;
+  grid-area: backSpace;
 }
 
 #dot {
   -ms-grid-row: 5;
   -ms-grid-column: 3;
-  grid-area: dots;
+  grid-area: dot;
 }
 
 #equal {
@@ -169,5 +178,11 @@ body {
   -ms-grid-row-span: 2;
   -ms-grid-column: 4;
   grid-area: equal;
+}
+
+#clear {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: clear;
 }
 /*# sourceMappingURL=style.css.map */
