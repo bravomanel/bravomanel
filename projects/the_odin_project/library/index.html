@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=MonteCarlo&family=Patrick+Hand&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href= "style.css" rel= "stylesheet">
+
+    <title>Library</title>
+</head>
+<body>
+    <h1>My Library</h1>
+    <main>
+        <div class="form">
+            <div class="addBook">
+                <fieldset>
+                    <h2>Add a New Book!</h2>
+                    <ul>
+                        <li>
+                            <label for="title">Title:</label>
+                            <br>
+                            <input type="text" id="title" placeholder="A Song of Ice and Fire" required>
+                        </li>
+                        <li>
+                            <label for="author">Author:</label> 
+                            <br>
+                            <input type="text" id="author" placeholder="George R. R. Martin" required>
+                        </li>
+                        <li>
+                            <label for="pages">Number of Pages:</label> 
+                            <br>
+                            <input type="number" id="pages" placeholder="280" required>
+                        </li>
+                        <li>
+                            <label for="pagesRead">Pages you read:</label> 
+                            <br>
+                            <input type="number" id="pagesRead" placeholder="0" required>
+                        </li>
+                        <li>
+                            <input type="button" value="Didn't Read" id="noneBtn">
+                            <input type="button" value="Finished" id="finishedBtn">
+                            <br>
+                        </li>
+                        <li>
+                            <input type="submit" value="Enter new Book" id="enterBtn">
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+            <div class="calculator">
+
+            </div>
+        </div>
+            <div class="bookSector">
+                <h2>My Books</h2>
+                <div class="books" id="myBooks">
+                </div>
+        </div>
+    </main>
+
+<script src="script.js"></script>
+</body>
+</html>

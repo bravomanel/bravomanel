@@ -10,6 +10,11 @@ $backgroundMainColor: rgba(239, 239, 243, 0.6);
 html{
     font-size: 16px;
     overflow-x: hidden;
+    // font-family: 'Abril Fatface', cursive;
+    // font-family: 'MonteCarlo', cursive;
+    font-family: 'Patrick Hand', cursive;
+    // font-family: 'Tangerine', cursive;
+    font-weight: 300;
 }
 
 body {
@@ -19,15 +24,19 @@ body {
 h1 {
     text-align: center;
     margin: 1rem;
-    font-family: monospace;
-    font-size: 2rem;
+    font-family: 'MonteCarlo', cursive;
+    font-size: 4rem;
 }
 
 main {
-    font-family: monospace;
     display: flex;
     flex-direction: row;
 }
+
+// font-family: 'Abril Fatface', cursive;
+// font-family: 'MonteCarlo', cursive;
+// font-family: 'Patrick Hand', cursive;
+// font-family: 'Tangerine', cursive;
 
 // Scrollbar
 

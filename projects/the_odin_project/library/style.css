@@ -6,6 +6,8 @@
 html {
   font-size: 16px;
   overflow-x: hidden;
+  font-family: 'Patrick Hand', cursive;
+  font-weight: 300;
 }
 
 body {
@@ -15,12 +17,11 @@ body {
 h1 {
   text-align: center;
   margin: 1rem;
-  font-family: monospace;
-  font-size: 2rem;
+  font-family: 'MonteCarlo', cursive;
+  font-size: 4rem;
 }
 
 main {
-  font-family: monospace;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,11 +49,20 @@ main {
 }
 
 .form {
+  top: 7rem;
   position: fixed;
   border: 1px solid black;
   min-width: 20rem;
-  height: 90vh;
+  height: 60vh;
   text-align: center;
+}
+
+.form h2 {
+  padding-top: 1rem;
+}
+
+.form label {
+  font-size: 1rem;
 }
 
 .bookSector {
@@ -91,5 +101,9 @@ main {
 
 .book h4 {
   padding-top: .5rem;
+}
+
+.readingNow {
+  background-color: yellow;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,15 @@
+.form {
+    top: 7rem;
+    position: fixed;
+    border: 1px solid black;
+    min-width: 20rem;
+    height: 60vh;
+    text-align: center;
+
+    h2 {
+        padding-top: 1rem;
+    }
+    label {
+        font-size: 1rem;
+    }
+}
