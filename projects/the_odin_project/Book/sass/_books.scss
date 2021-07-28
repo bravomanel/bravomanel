@@ -1,0 +1,30 @@
+.bookSector {
+    margin-left: 23rem;
+    text-align: center;
+    max-width: 100vw;
+}
+
+.books {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    // height: 200%;
+    // border: red 1px solid;
+    justify-content:flex-start;
+    align-content: flex-start;
+}
+
+.book {
+    border: cornflowerblue 2px solid;
+    border-radius: 1rem;
+    width: 15rem;
+    height: 15rem;
+    margin: 1rem;
+
+    h3 {
+        padding-top: .5rem;
+    }
+    h4 {
+        padding-top: .5rem;
+    }
+}

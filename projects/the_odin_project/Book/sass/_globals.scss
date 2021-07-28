@@ -1,0 +1,46 @@
+// variables
+
+$backgroundMainColor: rgba(239, 239, 243, 0.6);
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: $backgroundMainColor;
+}
+
+h1 {
+    text-align: center;
+    margin: 1rem;
+    font-family: monospace;
+    font-size: 2rem;
+}
+
+main {
+    font-family: monospace;
+    display: flex;
+    flex-direction: row;
+}
+
+// Scrollbar
+
+::-webkit-scrollbar {
+    width: .65rem;
+}
+::-webkit-scrollbar-track {
+    background: $backgroundMainColor;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: black;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
