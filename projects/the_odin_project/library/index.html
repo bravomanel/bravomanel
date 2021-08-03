@@ -14,7 +14,12 @@
     <title>Library</title>
 </head>
 <body>
-    <h1>My Library</h1>
+    <header>
+            <div class="headerContainer bottomGradient">
+                <img src="images/5.svg" alt="Book Image" id="headerImg">
+                <h1>My Library</h1>
+            </div>
+    </header>
     <main>
         <div class="form">
             <div class="addBook">
@@ -24,42 +29,72 @@
                         <li>
                             <label for="title">Title:</label>
                             <br>
-                            <input type="text" id="title" placeholder="A Song of Ice and Fire" required>
+                            <input class="input" type="text" id="title" placeholder="A Song of Ice and Fire" required>
                         </li>
                         <li>
                             <label for="author">Author:</label> 
                             <br>
-                            <input type="text" id="author" placeholder="George R. R. Martin" required>
+                            <input class="input" type="text" id="author" placeholder="George R. R. Martin" required>
                         </li>
                         <li>
                             <label for="pages">Number of Pages:</label> 
                             <br>
-                            <input type="number" id="pages" placeholder="280" required>
+                            <input class="input" type="number" id="pages" placeholder="280" required>
                         </li>
                         <li>
                             <label for="pagesRead">Pages you read:</label> 
                             <br>
-                            <input type="number" id="pagesRead" placeholder="0" required>
+                            <input class="input" type="number" id="pagesRead" placeholder="0" required>
                         </li>
                         <li>
-                            <input type="button" value="Didn't Read" id="noneBtn">
-                            <input type="button" value="Finished" id="finishedBtn">
+                            <input class="btn" type="button" value="Didn't Read" id="noneBtn">
+                            <input class="btn" type="button" value="Finished" id="finishedBtn">
                             <br>
                         </li>
                         <li>
-                            <input type="submit" value="Enter new Book" id="enterBtn">
+                            <input class="btn" type="submit" value="Enter new Book" id="enterBtn">
                         </li>
                     </ul>
                 </fieldset>
             </div>
-            <div class="calculator">
+            <div class="calculator" id="calculator">
+                <fieldset>
+                    <!-- Select what type of calculation -->
+                    <input type="radio" name="calculator" id="timeCalc">
+                    <label for="timeCalc">Say until when you have to read it</label> <br>
+                    <input type="radio" name="calculator" id="pagesCalc">
+                    <label for="pagesCalc">Say how much you will read per day</label>
 
+                    <div class="timeCalc">
+                        <!-- Select the pages and dates -->
+                        <input type="date"> <br>
+                        <!-- Select the book -->
+                        <input type="radio" name="selectDate" id="selectBookRadio">
+                        <label for="selectBookRadio">Select the book</label>
+                        <datalist id="selectBookDrop">
+                            <option value=""></option>
+                        </datalist> <br>
+                        <!-- Type the pages -->
+                        <input type="radio" name="selectDate" id="typePagesRadio">
+                        <label for="typePagesRadio">Type the pages</label> <br>
+                        <label for="typePagesTotal">Number of Pages to read:</label> <br>
+                        <input type="number" class="typePagesInput" id="typePagesTotal"> <br>
+                        <label for="typePagesTotal">Pages you already read:</label> <br>
+                        <input type="number" class="typePagesInput" id="typePagesToRead"> <br>
+                        <input type="button" value="check" id="calcBtn">
+                        
+                    </div>
+
+                    <div class="pagesCalc">
+
+                    </div>
+                </fieldset>
             </div>
         </div>
-            <div class="bookSector">
-                <h2>My Books</h2>
-                <div class="books" id="myBooks">
-                </div>
+        <div class="bookSector">
+            <h2>My Books</h2>
+            <div class="books" id="myBooks">
+            </div>
         </div>
     </main>
 

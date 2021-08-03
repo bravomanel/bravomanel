@@ -1,6 +1,8 @@
 // variables
 
-$backgroundMainColor: rgba(239, 239, 243, 0.6);
+// $backgroundMainColor: rgba(253, 151, 18, 0.6);
+$backgroundMainColor: rgba(253, 151, 18, .8);
+// $backgroundMainColor: #ff6d18;
 
 *{
     padding: 0;
@@ -10,10 +12,7 @@ $backgroundMainColor: rgba(239, 239, 243, 0.6);
 html{
     font-size: 16px;
     overflow-x: hidden;
-    // font-family: 'Abril Fatface', cursive;
-    // font-family: 'MonteCarlo', cursive;
     font-family: 'Patrick Hand', cursive;
-    // font-family: 'Tangerine', cursive;
     font-weight: 300;
 }
 
@@ -21,16 +20,37 @@ body {
     background-color: $backgroundMainColor;
 }
 
-h1 {
-    text-align: center;
-    margin: 1rem;
-    font-family: 'MonteCarlo', cursive;
-    font-size: 4rem;
-}
-
 main {
     display: flex;
     flex-direction: row;
+}
+
+li, ul, ol, a {
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+}
+
+.input {
+    height: 1rem;
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    margin: .1rem auto .4rem auto;
+    background-color: white;
+    border: 1px solid gray;
+    text-align: center;
+    outline: none;
+}
+
+.btn {
+    background-color: white;
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid gray;
+    margin-bottom: .5rem;
+    &:hover {
+        background-color: gray;
+    }
 }
 
 // font-family: 'Abril Fatface', cursive;
