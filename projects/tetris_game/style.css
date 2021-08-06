@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 2rem;
+  font-family: monospace;
+  text-align: center;
+  background-color: #1f2124;
+}
+
+canvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 0.25rem solid #bebebe;
+  border-radius: .25rem;
+  height: 80vh;
+}
+
+h1 {
+  font-size: 2.25rem;
+  text-shadow: black 2px 2px;
+  color: red;
+  padding: 0;
+  padding-top: .5rem;
+  margin: 0;
+}
+
+.scoreHolder {
+  position: fixed;
+  top: 30%;
+  left: 25%;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  width: 10rem;
+  height: 6rem;
+  background-color: #bebebe;
+  border: white .25rem solid;
+  border-radius: .25rem;
+  font-size: 2rem;
+}
+
+.scoreHolder p {
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=style.css.map */

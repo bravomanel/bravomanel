@@ -1,0 +1,82 @@
+h1 {
+  text-align: center;
+  padding: 1rem;
+}
+
+label {
+  font-size: 1.25rem;
+}
+
+fieldset {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 10.5rem;
+  padding: 0.5rem;
+}
+
+.playerNames input {
+  border-radius: 2rem;
+  border: 1px solid gray;
+  height: 1.5rem;
+  width: 10rem;
+  font-size: 1.5rem;
+  padding-left: .5rem;
+  outline: none;
+}
+
+.playerNames .buttons {
+  width: 5rem;
+  font-size: 1.25rem;
+  margin-top: .5rem;
+  padding-left: 0rem;
+  -webkit-box-shadow: black 1px 1px;
+          box-shadow: black 1px 1px;
+}
+
+.playerNames .buttons:hover {
+  -webkit-box-shadow: white 2px 2px;
+          box-shadow: white 2px 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+.playerNames .buttons:active {
+  -webkit-box-shadow: black -1px -1px;
+          box-shadow: black -1px -1px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+.gameContainer {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 2rem;
+  border: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  font-size: 7rem;
+  width: 24.75rem;
+}
+
+.square {
+  border: 2px solid black;
+  width: 8rem;
+  height: 8rem;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

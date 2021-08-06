@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href= "style.css" rel= "stylesheet">
+
+    <title>Vanilla</title>
+</head>
+<body>
+<main>
+    <header>
+        <h1>Tic Tac Toe game</h1>
+        <fieldset>
+            <!-- <div class="switchBox">
+                <label for="">2 Players</label>
+                <label class="switch">
+                    <input type="checkbox" id="switchBtn">
+                    <span class="slider round"></span>
+                </label>
+                <label for="">CPU</label>
+            </div> -->
+            <div class="playerNames">
+                    <label for="playerOneName">Player one name:</label> <br>
+                    <input type="text" name="playerOneName" id="playerOneName" placeholder="Bruce"> <br>
+                    <label for="playerTwoName">Player two name:</label> <br>
+                    <input type="text" name="playerTwoName" id="playerTwoName" placeholder="Alfred"> <br>
+                    <input type="button" class="buttons" value="Start" id="start">
+                    <input type="button" class="buttons" value="Clear" id="reset">
+                </div>
+            
+        </fieldset>
+    </header>
+    <div class="gameContainer" id="gameContainerId">
+        <div class="square" id="n1"></div>
+        <div class="square" id="n2"></div>
+        <div class="square" id="n3"></div>
+        <div class="square" id="n4"></div>
+        <div class="square" id="n5"></div>
+        <div class="square" id="n6"></div>
+        <div class="square" id="n7"></div>
+        <div class="square" id="n8"></div>
+        <div class="square" id="n9"></div>
+    </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
