@@ -19,12 +19,22 @@ dateHolder.textContent = date;
 
 
 //  Book Object Constructor
-function book(title, author, pages, hasRead) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.hasRead = hasRead;
-    myLibrary.push(this);
+// function book(title, author, pages, hasRead) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.hasRead = hasRead;
+//     myLibrary.push(this);
+// }
+
+class book {
+    constructor(title, author, pages, hasRead) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.hasRead = hasRead;
+        myLibrary.push(this);
+    }
 }
 
 // Display Book on the page
