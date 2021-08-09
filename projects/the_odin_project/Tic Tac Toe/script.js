@@ -7,8 +7,8 @@ let n6 = document.getElementById('n6');
 let n7 = document.getElementById('n7');
 let n8 = document.getElementById('n8');
 let n9 = document.getElementById('n9');
-let startBtn = document.getElementById('start');
-let resetBtn = document.getElementById('reset');
+let twoPlayBtn = document.getElementById('start');
+let cpuPlayBtn = document.getElementById('reset');
 let playerOneName = document.getElementById('playerOneName');
 let playerTwoName = document.getElementById('playerTwoName');
 let gameContainer = document.getElementById('gameContainerId');
@@ -29,20 +29,32 @@ playerTwoName.addEventListener('click', () => {
     playerTwoName.value = ''
 })
 
-startBtn.addEventListener('click', function () {
+twoPlayBtn.addEventListener('click', function () {
     let player1 = playerOneName.value;
     let player2 = playerTwoName.value;
 
     startGame();
 })
 
-resetBtn.addEventListener('click', () => {
-    reset();
-})
-
 function startGame(player1, player2) {
+    clear();
     playerOnePlay();
 }
+
+
+function clear() {
+    playerOneName.value = 'Bruce'
+    playerTwoName.value = 'Alfred'
+    
+    for (let i = 0; i < board.length; i++) {
+            board[i].textContent = '';
+    }
+    for (let i = 0; i < board.length; i++) {
+        board[i].removeEventListener('click', markX);
+        board[i].removeEventListener('click', markO);
+    }
+}
+
 
 function playerOnePlay() {
     checkWin('O');  
@@ -59,25 +71,27 @@ function playerTwoPlay() {
 }
 
 function markX () {
-        if (this.textContent !== '') {    
+    if (this.textContent !== '') {    
         } else {
-                this.textContent = 'X'    
-                for (let i = 0; i < board.length; i++) {
-                    board[i].removeEventListener('click', markX);
-                }
-                playerTwoPlay(); 
+            this.textContent = 'X'
+            this.classList.add('markAdd');
+            for (let i = 0; i < board.length; i++) {
+                board[i].removeEventListener('click', markX);
             }
+            playerTwoPlay(); 
+        }
 }
-
+        
 function markO () {
-        if (this.textContent !== '') {    
+    if (this.textContent !== '') {    
         } else {
-                this.textContent = 'O' 
-                for (let i = 0; i < board.length; i++) {
-                    board[i].removeEventListener('click', markO);
-                } 
-                playerOnePlay(); 
-            }
+            this.textContent = 'O' 
+            this.classList.add('markAdd');  
+            for (let i = 0; i < board.length; i++) {
+                board[i].removeEventListener('click', markO);
+            } 
+            playerOnePlay(); 
+        }
 }
 
 function checkWin (m) {
@@ -98,24 +112,23 @@ function checkWin (m) {
     } else if (n3.textContent === m && n5.textContent === m && n7.textContent === m) {
         won(m);
     } else {
-        console.log('nothing');
+        checkDraw();
     }
 }
+
+function checkDraw () {
+    let opa = 0
+    for (let i = 0; i < board.length; i++) {
+        if (board[i].textContent !== '') {
+            opa++;
+        }
+    }
+    if (opa >= 9) {
+        alert("It's a Draw")
+    }
+}
+
 
 function won (m) {
     alert(`${m} Won the game!`)
-}
-
-function reset() {
-    playerOneName.value = 'Bruce'
-    playerTwoName.value = 'Alfred'
-
-    for (let i = 0; i < board.length; i++) {
-            board[i].textContent = '';
-    }
-    for (let i = 0; i < board.length; i++) {
-        board[i].removeEventListener('click', markX);
-        board[i].removeEventListener('click', markO);
-    }
-    startGame(player1, player2)
 }

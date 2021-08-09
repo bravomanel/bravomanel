@@ -1,10 +1,34 @@
+@-webkit-keyframes markedAdd {
+  from {
+    color: white;
+  }
+  to {
+    color: black;
+  }
+}
+
+@keyframes markedAdd {
+  from {
+    color: white;
+  }
+  to {
+    color: black;
+  }
+}
+
+.markAdd {
+  -webkit-animation: markedAdd 1000ms;
+          animation: markedAdd 1000ms;
+}
+
 h1 {
+  font-size: 3rem;
   text-align: center;
   padding: 1rem;
 }
 
 label {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
 }
 
 fieldset {
@@ -13,23 +37,23 @@ fieldset {
   left: 1rem;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  width: 10.5rem;
+  width: 15rem;
   padding: 0.5rem;
 }
 
 .playerNames input {
   border-radius: 2rem;
   border: 1px solid gray;
-  height: 1.5rem;
+  height: 2rem;
   width: 10rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   padding-left: .5rem;
   outline: none;
 }
 
 .playerNames .buttons {
-  width: 5rem;
-  font-size: 1.25rem;
+  width: 100%;
+  font-size: 1.5rem;
   margin-top: .5rem;
   padding-left: 0rem;
   -webkit-box-shadow: black 1px 1px;
@@ -69,14 +93,14 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  font-size: 7rem;
-  width: 24.75rem;
+  font-size: 11rem;
+  width: 39.75rem;
 }
 
 .square {
   border: 2px solid black;
-  width: 8rem;
-  height: 8rem;
+  width: 13rem;
+  height: 13rem;
   text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

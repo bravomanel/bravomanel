@@ -1,0 +1,9 @@
+@keyframes markedAdd {
+    from {color: white;}
+    to {color: black;}
+}
+
+
+.markAdd {
+    animation: markedAdd 1000ms;
+}
