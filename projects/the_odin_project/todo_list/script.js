@@ -74,7 +74,7 @@ function checkEmpty () {
             removeTempItem();
         }
      }
-     
+
     if (listImg.classList.contains('active')) {   
         removeTempItem()    
     }
@@ -87,55 +87,100 @@ function createItem () {
     }
 }
 
-function createDescription () {
-    let tempTitle = titleInput.value;
-    let tempText = textArea.value;
+function factoryFunction (title, text, id) {
+    let tempTitle = title;
+    let tempText = text;
     let newDiv = document.createElement('div');
     let H2 = document.createElement('h2');
     let p = document.createElement('p');
+    
+    addDeleteButton(newDiv, id);
+    // let deleteBtn = document.createElement('input');
+    // deleteBtn.classList.add('deleteBtn');
+    // deleteBtn.type = 'button';
+    // deleteBtn.value = 'X';
+    // deleteBtn.addEventListener('click', function() {
+    //     newDiv.remove();
+    // });
+    // newDiv.appendChild(deleteBtn);
+
+    newDiv.classList.add('project');
+    H2.textContent = tempTitle;
+    p.textContent = tempText;
+
+    newDiv.appendChild(H2);
+    newDiv.appendChild(p);
+    projects.appendChild(newDiv);
+}
+
+
+function addDeleteButton (newDiv, id) {
     let deleteBtn = document.createElement('input');
     deleteBtn.classList.add('deleteBtn');
     deleteBtn.type = 'button';
     deleteBtn.value = 'X';
     deleteBtn.addEventListener('click', function() {
+        for (let index = 0; index < myArray.length; index++) {
+            if (myArray[index][2] == id) {
+                myArray.splice(index, 1);
+                localStorage.setItem(`myArray`, myArray);
+            }
+            
+        }
         newDiv.remove();
     });
-    newDiv.classList.add('project');
-    H2.textContent = tempTitle;
-    p.textContent = tempText;
     newDiv.appendChild(deleteBtn);
-    newDiv.appendChild(H2);
-    newDiv.appendChild(p);
-    projects.appendChild(newDiv);
+}
+
+function createDescription () {
+    factoryFunction(titleInput.value, textArea.value)
+    updateStorage(titleInput.value, textArea.value, new Date().getTime());
     removeTempItem();
 }
 
 
 // Local Storage
 
-if (!localStorage.getItem('bgcolor')) {
+let myArray = []
+
+if (!localStorage.getItem('toDoStorage')) {
     setDefault();
+} else {
+    loadStorage();
 }
 
 function setDefault() {
-    let defaultDiv = document.createElement('div');
-    let defaultTitle = document.createElement('h2');
-    let defaultText = document.createElement('p');
-    let deleteBtn = document.createElement('input');
-    deleteBtn.classList.add('deleteBtn');
-    deleteBtn.type = 'button';
-    deleteBtn.value = 'X';
-    deleteBtn.addEventListener('click', function() {
-        defaultDiv.remove();
-    });
-    defaultDiv.classList.add('project');
-    defaultTitle.textContent = 'Seja bem vindo';
-    defaultText.textContent = 'Ainda estamos trabalhando em atualizações no site para melhor atendelo, por enquanto você pode criar e deletar novos itens apenas, vamos adicionar suporte a listas, datas e salvar seus itens nos dispositivos';
-    defaultDiv.appendChild(deleteBtn);
-    defaultDiv.appendChild(defaultTitle);
-    defaultDiv.appendChild(defaultText);
-    projects.appendChild(defaultDiv);
+    factoryFunction('Seja bem vindo',
+    'Ainda estamos trabalhando em atualizações no site para melhor atende-lo, por enquanto você pode criar e deletar novos itens apenas, vamos adicionar suporte a listas, datas e salvar seus itens nos dispositivos'
+    )
 }
+
+
+function loadStorage () {
+    console.log('loadStorage function just been executed');
+
+    tempArray = localStorage.getItem('myArray');
+    splitedArray = tempArray.split(',');
+    makerArray = Array.from(splitedArray);
+    let loaderArray = []
+    for (let index = 0; index < makerArray.length; index++) {
+        let maker = [];
+        maker.push(makerArray[index], makerArray[++index], makerArray[++index]);
+        loaderArray.push(maker);
+    }
+
+    for (let index = 0; index < loaderArray.length; index++) {
+        factoryFunction(loaderArray[index][0], loaderArray[index][1], loaderArray[index][2]);
+    }
+    myArray = loaderArray;
+}
+
+function updateStorage (title, text, id) {
+    myArray.push([title, text, id]);
+    localStorage.setItem(`toDoStorage`, 1);
+    localStorage.setItem(`myArray`, myArray);
+}
+
 
 // Actual Code ------>
 
