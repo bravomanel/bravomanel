@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    background-color: $grayBlueish;
+    font-family: $mainFont;
+}
+
+
+// Header
+
+#header {
+    background-color: $orange;
+    width: 100vw;
+    height: 4rem;
+    position: absolute;
+    
+    h1{
+        font-size: 2rem;
+        text-align: center;
+        margin: .65rem 0;
+
+   } 
+}
+
+
+// New Project Bar
+
+#newBar {
+    width: 35rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: .25rem;
+    padding: .25rem;
+    
+    position: absolute;
+    left: 50%;
+    top: 6rem;
+    transform: translate(-50%);
+
+    display: flex;
+    flex-direction: row;
+}
+
+#placeHolder {
+    font-size: 2rem;
+    margin-top: .5rem;
+    width: 92%;
+    color: gray;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    margin-left: .5rem ;
+}
+
+.svgs1 {
+    width: 1.5rem;
+    padding: .25rem;
+    &:hover {
+        background-color: $hoverWhite;
+        border-radius: 1rem;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.hasText {
+    background-color: gray;
+}
+
+// POP UP BAR
+
+#popBar {
+    width: 35rem;
+    height: 15rem;
+    background-color: $orange;
+    border-radius: .25rem;
+    padding: 1rem;
+    
+    position: absolute;
+    left: 50%;
+    top: 6rem;
+    transform: translate(-50%);
+}
+
+#titleInputLabel {
+    font-size: 1.5rem;
+}
+    
+#titleInput {
+    width: 78%;
+    margin: 0 auto ;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: .25rem;
+    outline: none;
+}
+
+#textArea {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1rem;
+    border: none;
+    border-radius: .25rem;
+    outline: none;
+}
+
+.svgs2 {
+    float: right;
+    width: 1.5rem;
+    padding: .25rem;
+    &:hover {
+        background-color: $hoverOrange;
+        border-radius: 1rem;
+    }
+}
+
+.list {
+    height: 1.5rem;
+    width: 30rem;
+    margin-left: 2rem;
+    outline: none;
+    border-radius: 0.25rem;
+    border: none;
+}
+
+
+// Projects
+
+#projects {
+    width: 100vw;
+    height: 80vh;
+    padding-top: 20vh;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.project {
+    height: 15rem;
+    width: 25rem;
+    color: $whiteBlueish;
+
+    border: 2px solid $orange;
+    border-radius: .25rem;
+    margin: 2rem;
+    
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: .75rem 0 .5rem 0;
+    }
+    p {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+}
+
+.deleteBtn {
+    padding: .5rem .675rem;
+    margin: .5rem;
+    color: $orange;
+    background-color: $grayBlueish;
+    border: 1px solid $orange;
+    border-radius: 1rem;
+    outline: none;
+    float: left;
+
+    &:hover {
+        background-color: $orange;
+        color: black;
+    }
+}
