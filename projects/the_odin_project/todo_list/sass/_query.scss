@@ -1,0 +1,43 @@
+@media only screen and (max-width: 59rem) {
+    #newBar {
+        max-width: 35rem;
+        width: 80%;
+        min-width: 19rem;
+    }
+
+    #popBar {       
+        max-width: 35rem;
+        width: 82%;
+        height: 30%;
+    }
+
+    #titleInput {
+        width: 70%;
+    }
+
+    .project {
+        max-width: 25rem;
+        width: 40vw;
+        min-width: 20rem;
+        margin: .5rem;
+    }
+
+}
+
+@media only screen and (max-width: 48rem) {
+    .project {
+        width: 90vw;
+    }
+
+    #titleInput {
+        width: 100%;
+    }
+
+    #svgs2 {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        right: .25rem;
+        top: .25rem;
+    }
+}

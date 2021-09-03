@@ -93,13 +93,14 @@ html {
 }
     
 #titleInput {
-    width: 78%;
+    width: 70%;
     margin: 0 auto ;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     border: none;
     border-radius: .25rem;
     outline: none;
+    padding-left: 0.5rem;
 }
 
 #textArea {
@@ -109,16 +110,21 @@ html {
     border: none;
     border-radius: .25rem;
     outline: none;
+    padding-left: 0.5rem;
+    padding-top: 0.25rem;
 }
 
 .svgs2 {
-    float: right;
     width: 1.5rem;
     padding: .25rem;
     &:hover {
         background-color: $hoverOrange;
         border-radius: 1rem;
     }
+}
+
+#svgs2 {
+    float: right;
 }
 
 .list {

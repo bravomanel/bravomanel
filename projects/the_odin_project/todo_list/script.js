@@ -95,14 +95,6 @@ function factoryFunction (title, text, id) {
     let p = document.createElement('p');
     
     addDeleteButton(newDiv, id);
-    // let deleteBtn = document.createElement('input');
-    // deleteBtn.classList.add('deleteBtn');
-    // deleteBtn.type = 'button';
-    // deleteBtn.value = 'X';
-    // deleteBtn.addEventListener('click', function() {
-    //     newDiv.remove();
-    // });
-    // newDiv.appendChild(deleteBtn);
 
     newDiv.classList.add('project');
     H2.textContent = tempTitle;
@@ -151,7 +143,7 @@ if (!localStorage.getItem('toDoStorage')) {
 
 function setDefault() {
     factoryFunction('Seja bem vindo',
-    'Ainda estamos trabalhando em atualizações no site para melhor atende-lo, por enquanto você pode criar e deletar novos itens apenas, vamos adicionar suporte a listas, datas e salvar seus itens nos dispositivos'
+    'Ainda estamos trabalhando em atualizações no site para melhor atende-lo, por enquanto você pode criar e deletar novos itens apenas, vamos adicionar suporte a listas, datas e corrigir alguns bugs...'
     )
 }
 
