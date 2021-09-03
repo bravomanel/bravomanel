@@ -8,11 +8,16 @@
     #popBar {       
         max-width: 35rem;
         width: 82%;
-        height: 30%;
+        height: 20rem;
     }
 
     #titleInput {
         width: 70%;
+        height: 3rem;
+    }
+
+    #textArea {
+        height: 15rem;
     }
 
     .project {
@@ -25,6 +30,9 @@
 }
 
 @media only screen and (max-width: 48rem) {
+    #popBar {
+        height: 22rem;
+    }
     .project {
         width: 90vw;
     }
