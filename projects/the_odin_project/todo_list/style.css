@@ -89,7 +89,7 @@ html {
 }
 
 #titleInput {
-  width: 70%;
+  width: 66%;
   margin: 0 auto;
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -187,6 +187,49 @@ html {
   color: black;
 }
 
+.listItem {
+  width: calc(100% - 2.75rem);
+  height: 1.5rem;
+  padding-left: .5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: .25rem;
+  outline: none;
+  margin-top: .25rem;
+}
+
+#newListItemBtn {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-top: .5rem;
+  font-size: 1.25rem;
+  border-radius: 1rem;
+  border: none;
+  color: black;
+  background-color: white;
+  border: 1px solid white;
+}
+
+#newListItemBtn:hover {
+  border: 1px solid black;
+}
+
+.rmvListItemBtnClass {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-top: .5rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  border: none;
+  color: black;
+  background-color: white;
+  border: 1px solid white;
+}
+
+.rmvListItemBtnClass:hover {
+  border: 1px solid black;
+}
+
 @media only screen and (max-width: 59rem) {
   #newBar {
     max-width: 35rem;
@@ -199,7 +242,7 @@ html {
     height: 20rem;
   }
   #titleInput {
-    width: 70%;
+    width: calc(100% - 12rem);
     height: 3rem;
   }
   #textArea {

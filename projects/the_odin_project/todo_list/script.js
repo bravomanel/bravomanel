@@ -1,3 +1,5 @@
+// Getting Variables ------>
+
 let descriptionImg = document.getElementById('descriptionIMG');
 let listImg = document.getElementById('listIMG');
 let checkImg = document.getElementById('checkIMG');
@@ -6,9 +8,9 @@ let placeHolder = document.getElementById('placeHolder')
 let titleInput = document.getElementById('titleInput');
 let popbar = document.getElementById('popBar');
 let projects = document.getElementById('projects');
+let myArray = []
+let arrayOfList = [];
 
-
-// <------ Getting Variables
 
 // List or Description Toggle ------>
 
@@ -29,10 +31,6 @@ function toggleListAndDescription () {
     }
 }
 
-function clickListAndDescription () {
-    toggleListAndDescription()
-}
-
 
 // Pop Bar and Checklist
 
@@ -50,11 +48,47 @@ function popTheBar () {
         popbar.appendChild(textAreaInput);
     }
     if (listImg.classList.contains('active')) {
-        let underConstruction = document.createElement('p');
-        underConstruction.textContent = 'Ainda estamos trabalhando nessa função';
-        underConstruction.id = 'underconstrct'
-        popbar.appendChild(underConstruction);
+        let underConstruction = document.createElement('p'); //To remove after finish lists support
+        underConstruction.textContent = 'Ainda estamos trabalhando nessa função'; //To remove after finish lists support
+        underConstruction.id = 'underconstrct' //To remove after finish lists support
+        popbar.appendChild(underConstruction); //To remove after finish lists support
+        let listDiv = document.createElement('div');
+        listDiv.id = 'listDivId';
+        popbar.appendChild(listDiv);
+        newListItem(listDiv);
     }    
+}
+
+function newListItem (listDiv) {
+    let listItem = document.createElement('input');
+    listItem.type = 'text';
+    listItem.classList.add('listItem');
+    listDiv.appendChild(listItem);
+    removeListItemButton(listItem, listDiv);
+    clickNewListItemButton(listDiv);
+}
+
+function clickNewListItemButton (listDiv) {
+    let newListItemButton = document.createElement('button');
+    newListItemButton.textContent = '+';
+    newListItemButton.id = 'newListItemBtn';
+    newListItemButton.addEventListener('click', function () {    
+        popbar.removeChild(newListItemBtn);
+        newListItem(listDiv);
+    } )
+    popbar.appendChild(newListItemButton);
+}
+
+function removeListItemButton (lI, listDiv) {
+    let rmvListItemButton = document.createElement('button');
+    rmvListItemButton.textContent = 'X';
+    rmvListItemButton.classList.add('rmvListItemBtnClass');
+    rmvListItemButton.id = 'rmvListItemBtn';
+    rmvListItemButton.addEventListener('click', function () {    
+        lI.remove();
+        rmvListItemButton.remove();
+    } )
+    listDiv.appendChild(rmvListItemButton);
 }
 
 function removeTempItem () {
@@ -64,7 +98,9 @@ function removeTempItem () {
         popbar.removeChild(textArea);
     }
     if (listImg.classList.contains('active')) {   
-        popbar.removeChild(underconstrct);
+        popbar.removeChild(underconstrct); //To remove after finish lists support
+        popbar.removeChild(newListItemBtn);
+        popbar.removeChild(listDivId);
     }
 }
 
@@ -72,22 +108,34 @@ function checkEmpty () {
     if (descriptionImg.classList.contains('active')) {
         if (textArea.value == '' && titleInput.value == '') {
             removeTempItem();
+            return true;
         }
-     }
-
+    }
+    
     if (listImg.classList.contains('active')) {   
-        removeTempItem()    
+        if (titleInput.value == '') {
+            removeTempItem();
+            return true;
+        }
     }
 }
 
+
+// Creating the Items ------>
+
 function createItem () {
-    checkEmpty();
+    if (checkEmpty()) {
+        return;
+    }
     if (descriptionImg.classList.contains('active')) {
         createDescription();
     }
+    if (listImg.classList.contains('active')) {
+        createList();
+    }
 }
 
-function factoryFunction (title, text, id) {
+function factoryDescription (title, text, id) {
     let tempTitle = title;
     let tempText = text;
     let newDiv = document.createElement('div');
@@ -105,6 +153,42 @@ function factoryFunction (title, text, id) {
     projects.appendChild(newDiv);
 }
 
+function createArrayOfList () {
+    let listDiv = document.getElementById('listDivId');
+    arrayOfList = []
+    while (listDiv.firstChild) {
+        if (listDiv.firstChild.classList.contains('listItem')) {
+            if (listDiv.firstChild.value != '') {
+                arrayOfList.push(listDiv.firstChild.value)
+            }
+            listDiv.removeChild(listDiv.firstChild);
+        } else {
+            listDiv.removeChild(listDiv.firstChild);
+        }
+    }
+    console.log(arrayOfList);
+}
+
+function factoryList (title, array, id) {
+    let tempTitle = title;
+    let newDiv = document.createElement('div');
+    let H2 = document.createElement('h2');
+    let listHolder = document.createElement('div');
+    
+    addDeleteButton(newDiv, id);
+    newDiv.classList.add('project');
+    H2.textContent = tempTitle;
+
+    for (let i = 0; i < array.length; i++) {
+        let tempListItem = document.createElement('p');
+        tempListItem.textContent = array[i];
+        listHolder.appendChild(tempListItem);
+    }
+    
+    newDiv.appendChild(H2);
+    newDiv.appendChild(listHolder);
+    projects.appendChild(newDiv);
+}
 
 function addDeleteButton (newDiv, id) {
     let deleteBtn = document.createElement('input');
@@ -117,7 +201,6 @@ function addDeleteButton (newDiv, id) {
                 myArray.splice(index, 1);
                 localStorage.setItem(`myArray`, myArray);
             }
-            
         }
         newDiv.remove();
     });
@@ -125,59 +208,82 @@ function addDeleteButton (newDiv, id) {
 }
 
 function createDescription () {
-    factoryFunction(titleInput.value, textArea.value)
-    updateStorage(titleInput.value, textArea.value, new Date().getTime());
+    factoryDescription(titleInput.value, textArea.value, '0'+new Date().getTime())
+    // updateStorage(titleInput.value, textArea.value, '0'+new Date().getTime());
     removeTempItem();
 }
 
+function createList () {
+    createArrayOfList();
+    factoryList(titleInput.value, arrayOfList,'1'+new Date().getTime());
+    // updateStorage(titleInput.value, Array.from(arrayOfList),'1'+new Date().getTime());
+    removeTempItem();
+}
 
 // Local Storage
 
-let myArray = []
-
-if (!localStorage.getItem('toDoStorage')) {
-    setDefault();
-} else {
-    loadStorage();
+function checkStorage() {   
+    if (!localStorage.getItem('toDoStorage')) {
+        setDefault();
+    } else {
+        loadStorage();
+    }
 }
 
 function setDefault() {
-    factoryFunction('Seja bem vindo',
+    factoryDescription('Seja bem vindo',
     'Ainda estamos trabalhando em atualizações no site para melhor atende-lo, por enquanto você pode criar e deletar novos itens apenas, vamos adicionar suporte a listas, datas e corrigir alguns bugs...'
     )
 }
 
+// function loadStorage () {
+//     console.log('loadStorage function just been executed');
 
-function loadStorage () {
-    console.log('loadStorage function just been executed');
+//     tempArray = localStorage.getItem('myArray');
+//     splitedArray = tempArray.split(',');
+//     makerArray = Array.from(splitedArray);
+//     let loaderArray = []
+//     for (let index = 0; index < makerArray.length; index++) {
+//         let maker = [];
+//         maker.push(makerArray[index], makerArray[++index], makerArray[++index]);
+//         loaderArray.push(maker);
+//     }
 
-    tempArray = localStorage.getItem('myArray');
-    splitedArray = tempArray.split(',');
-    makerArray = Array.from(splitedArray);
-    let loaderArray = []
-    for (let index = 0; index < makerArray.length; index++) {
-        let maker = [];
-        maker.push(makerArray[index], makerArray[++index], makerArray[++index]);
-        loaderArray.push(maker);
-    }
+//     // Code 0 means Description
+//     // Code 1 means List
 
-    for (let index = 0; index < loaderArray.length; index++) {
-        factoryFunction(loaderArray[index][0], loaderArray[index][1], loaderArray[index][2]);
-    }
-    myArray = loaderArray;
-}
+//     for (let index = 0; index < loaderArray.length; index++) {
+//         if (loaderArray[index][2][0] == '0') {
+//             factoryDescription(loaderArray[index][0], loaderArray[index][1], loaderArray[index][2]);
+//             console.log('zero');
+//         }
+//         if (loaderArray[index][2][0] == '1') {
+//             factoryList(loaderArray[index][0], loaderArray[index][1], loaderArray[index][2]);
+//             console.log('one');
+//         }
+//     }
+//     myArray = loaderArray;
+// }
 
-function updateStorage (title, text, id) {
-    myArray.push([title, text, id]);
-    localStorage.setItem(`toDoStorage`, 1);
-    localStorage.setItem(`myArray`, myArray);
-}
+// function updateStorage (title, text, id) {
+//     myArray.push([title, text, id]);
+//     localStorage.setItem(`toDoStorage`, 1);
+//     localStorage.setItem(`myArray`, myArray);
+// }
 
 
 // Actual Code ------>
 
-descriptionImg.addEventListener('click', clickListAndDescription);
-listImg.addEventListener('click', clickListAndDescription);
+descriptionImg.addEventListener('click', toggleListAndDescription);
+listImg.addEventListener('click', toggleListAndDescription);
 placeHolder.addEventListener('click', popTheBar);
 deleteImg.addEventListener('click', removeTempItem);
 checkImg.addEventListener('click', createItem);
+checkStorage();
+
+// Functions to Add ------>
+
+// Add editor for Items
+
+// Add Up and Down for Items
+// add date support

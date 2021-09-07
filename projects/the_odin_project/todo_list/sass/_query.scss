@@ -12,9 +12,10 @@
     }
 
     #titleInput {
-        width: 70%;
+        width: calc(100% - 12rem);
         height: 3rem;
     }
+
 
     #textArea {
         height: 15rem;
