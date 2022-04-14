@@ -1,4 +1,4 @@
-const finalDate = new Date('Apr 14 2022 17:07:00 GMT-0300').getTime();
+const finalDate = new Date('Apr 14 2022 17:00:00 GMT-0300').getTime();
 
 const x = setInterval(function() {
     const now = new Date().getTime();
