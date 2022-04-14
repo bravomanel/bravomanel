@@ -38,3 +38,21 @@ h2 {
     padding: 0;
     margin-top: 0.75rem;
 }
+
+@media only screen and (max-width: 70rem) {
+    h1 {
+      font-size: 7rem;
+      margin: 0;
+      margin-top: 1rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    #clock {
+        width: 96%;
+        height: 18rem;
+    }
+    #timer {
+        font-size: 16rem;
+    }
+  }
