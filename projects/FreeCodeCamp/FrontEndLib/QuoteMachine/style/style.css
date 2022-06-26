@@ -1,0 +1,53 @@
+body {
+  size: 16px;
+  background-color: rgb(136, 158, 255);
+}
+
+#quoteMachineDiv {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 40rem;
+}
+
+#quotes {
+  min-height: 13rem;
+  border: 0.5rem solid rgb(255, 188, 62);
+  border-radius: 1rem;
+}
+
+#theQuote {
+  font-size: 1.75rem;
+  padding: 1.5rem;
+  padding-bottom: 0.25rem;
+  margin: 0.25rem 0;
+  margin-bottom: 0.25rem;
+}
+
+#theAuthor {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  text-align: right;
+  font-size: 1.25rem;
+  padding: 0.25rem;
+  margin: 1rem 2rem;
+}
+
+#newQuoteBtn {
+  background-color: orange;
+  border: 0.15rem solid orange;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+}
+#newQuoteBtn:hover {
+  border: 0.15rem solid black;
+}
+
+#byEmanuel {
+  padding: 0;
+  margin: 0.5rem;
+  color: rgb(75, 49, 0);
+}/*# sourceMappingURL=style.css.map */
