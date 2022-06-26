@@ -1,0 +1,23 @@
+@import "header";
+
+main {
+    width: 60rem;
+    margin: 0 auto;
+}
+
+h2 {
+    margin: 3rem auto;
+    font-size: 1.5 rem;
+    text-align: center;
+}
+
+#stories {
+    float: right;
+    font-size: medium;
+    color: black;
+    padding: .5rem .25rem;
+    width: 7rem;
+    background-color: gray;
+    border: .25rem solid black;
+    border-radius: .5rem;
+}
