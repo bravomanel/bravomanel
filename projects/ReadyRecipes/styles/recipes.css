@@ -1,10 +1,5 @@
 header {
-  min-width: 90%;
-}
-
-nav {
-  margin: 0 auto;
-  width: 40rem;
+  width: 100%;
 }
 
 #categoriesHeader {
@@ -27,28 +22,34 @@ nav {
 }
 
 h1 {
-  font-size: 2rem;
   text-align: center;
+  font-size: 2rem;
+  padding-bottom: 0.375rem;
+  border-bottom: 0.075rem dotted black;
 }
 
 main {
-  width: 60rem;
   margin: 0 auto;
 }
 
 h2 {
-  margin: 3rem auto;
+  margin: 2rem auto;
   font-size: 1.5 rem;
   text-align: center;
 }
 
-#stories {
-  float: right;
+.recipeStyle h3 {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+#alfredBtn {
+  margin: 0 25%;
   font-size: medium;
   color: black;
   padding: 0.5rem 0.25rem;
-  width: 7rem;
-  background-color: gray;
+  width: 60%;
+  background-color: rgb(203, 204, 207);
   border: 0.25rem solid black;
   border-radius: 0.5rem;
 }/*# sourceMappingURL=recipes.css.map */

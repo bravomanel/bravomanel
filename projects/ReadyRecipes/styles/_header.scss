@@ -1,12 +1,11 @@
 header {
-    min-width: 90%;
+    width: 100%;
 }
-nav {
-    margin: 0 auto;
-    width: 40rem;
-}
+// nav {
+//     margin: 0 auto;
+//     width: 100%;
+// }
 #categoriesHeader {
-    // margin: 0 auto;
     
     display: flex;
     flex-direction: row;
@@ -27,6 +26,8 @@ nav {
 }
 
 h1 {
-    font-size: 2rem;
     text-align: center;
+    font-size: 2rem;
+    padding-bottom: .375rem;
+    border-bottom: .075rem dotted black;
 }
