@@ -16,14 +16,21 @@
 
 <body>
     <nav class="navbar">
-        <div class="header">
+        <a href="index.html" class="header">
             <img src="img/franco-icon.png" alt="Hamburguer Icon" id="franco-icon" class="">
             <h1>FRANCO BURGUER</h1>
-        </div>
+        </a>
     </nav>
-    
+        
     <div class="main">
         <div class="burguers">
+            <div class="cardapio">
+                <a href="cardapio.html" class="cardapio">
+                    <h2>
+                        Cardápio Completo
+                    </h2>
+                </a>
+            </div>
             <div id="burguer1" class="burguerPic fade">
                 <div class="numbertext">1 / 4</div>
                 <img src="img/burguers/burguer1.jfif" alt="Hamburguer1" class="burguerImg">
@@ -54,19 +61,29 @@
                 <span class="dot" onclick="currentSlide(4)"></span>
             </div>
         </div>
+
+        <div class="pedido-online">
+            <a href="pedido-online.html" class="pedido-online">
+                <h2>Faça seu pedido online aqui!</h2>
+            </a>
+        </div>
+
         <div class="location">
-            <div class="tamoios place-container">
-                <h2>Tamoios</h2>
-                <p>Rua Rua Pargo Aquárius, Cabo Frio - RJ, 28928-000</p>
-                <div class="map-container">
-                    <iframe width="320" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=franco%20burguer&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <h2>Conheça nossas lojas:</h2>
+            <div class="maps">                
+                <div class="tamoios place-container">
+                    <h3>Tamoios</h3>
+                    <p class="adressParagraph">Rua Pargo Aquárius, Cabo Frio - RJ, 28928-000</p>
+                    <div class="map-container">
+                        <iframe width="320" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=franco%20burguer&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
                 </div>
-            </div>
-            <div class="rioDasOstras place-container">
-                <h2>Rio das Ostras</h2>
-                <p>Av. Gov. Roberto Silveira, 625 - Costazul, Rio das Ostras - RJ, 28890-000</p>
-                <div class="map-container">
-                    <iframe width="320" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=franco%20burguer%20rio%20das%20ostras&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <div class="rioDasOstras place-container">
+                    <h3>Rio das Ostras</h3>
+                    <p class="adressParagraph">Av. Gov. Roberto Silveira, 625 - Costazul, Rio das Ostras - RJ, 28890-000</p>
+                    <div class="map-container">
+                        <iframe width="320" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=franco%20burguer%20rio%20das%20ostras&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
@@ -76,7 +93,7 @@
         <div class="footer-container">
             <div class="phone">
                 <img src="img/phone.svg" alt="telephone" class="icon">
-                <h3>(22) 99204-5535</h3>
+                <h4>(22) 99204-5535</h4>
             </div>
             <div class="links">
 

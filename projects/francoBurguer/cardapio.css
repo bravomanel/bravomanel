@@ -1,0 +1,30 @@
+#h2Dogs {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.dogs, .burgers {
+    color: white;
+    width: 40rem;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.dog, .burger {
+    text-align: left;
+    border-bottom: 0.09rem solid white;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+.dog:last-child, .burger:last-child{
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
