@@ -10,7 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Style Sheets -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/pedido-online.css">
 
 </head>
 
@@ -24,16 +27,19 @@
         
     <div class="main">
         
-        <div class="pedido-online">
-            <a href="pedido-online.html" class="pedido-online">
+        <div class="pedido-online-container">
+            <a href="pedido-online.html" class="pedido-online-link">
                 <h2>Faça seu pedido online aqui!</h2>
             </a>
-            <iframe src="https://francoburger.ccmpedidoonline.com.br" frameborder="0" width="500" height="700"></iframe>
+            <iframe src="https://francoburger.ccmpedidoonline.com.br" frameborder="0" width="350" height="700" id="iframe-pedido-350"></iframe>
+            <iframe src="https://francoburger.ccmpedidoonline.com.br" frameborder="0" width="400" height="700" id="iframe-pedido-400"></iframe>
+            <iframe src="https://francoburger.ccmpedidoonline.com.br" frameborder="0" width="500" height="700" id="iframe-pedido-500"></iframe>
+            <!-- <iframe src="https://francoburger.ccmpedidoonline.com.br" frameborder="0" width="500" height="700"></iframe> -->
         </div>
 
     </div>
         
-    <footer class="footer">
+    <footer class="footer footer-pedido-online">
         <div class="footer-container">
             <div class="phone">
                 <img src="img/phone.svg" alt="telephone" class="icon">

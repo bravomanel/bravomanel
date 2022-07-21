@@ -1,0 +1,41 @@
+/* Location */
+
+.maps {
+    padding-bottom:1rem ;
+}
+
+.place-container{
+    width: 22rem;
+    margin: auto;
+    /* border: .5rem rgb(196, 195, 195) solid; */
+    border-radius: .5rem;
+    background-color: rgb(48, 48, 48);
+    color: rgb(245, 245, 245);
+    margin-bottom: 2rem;
+}
+
+.map-container {
+    padding-left: 1rem;
+    padding-bottom: .5rem;
+}
+
+p {
+    font-family: 'Inconsolata', monospace;
+    font-weight: 300;
+    text-align: center;
+    padding: .5rem 1.5rem;
+}
+
+.adressParagraph {
+    height: 3.2rem;
+}
+
+@media only screen and (min-width: 900px) {
+    .maps {
+        display: flex;
+        margin: 0 auto;
+        max-width: 50rem;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+}

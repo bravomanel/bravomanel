@@ -3,6 +3,10 @@
     padding: 0;
     font-size: 16px;
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 /* WHITE:rgb(245, 245, 245)
 BLACK: rgb(48, 48, 48)
@@ -31,7 +35,7 @@ LIGHT-GRAY: rgb(196, 195, 195) */
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    height: 4.25rem;
+    height: 3.75rem;
     text-decoration: none;
 }
 .header:active, .header:visited {
@@ -39,15 +43,29 @@ LIGHT-GRAY: rgb(196, 195, 195) */
 }
 
 #franco-icon {
-    height: 3.5rem;
+    height: 3rem;
+    /* height: 3.5rem; */
 }
 
 h1 {
     font-family: 'Inconsolata', monospace;
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 2.25rem;
+    /* font-size: 3rem; */
     color: rgb(245, 245, 245);
     padding-left: 1.2rem;
+}
+
+@media only screen and (min-width: 768px) {
+    #franco-icon {
+        height: 3.5rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    .header {
+        height: 4.25rem;
+    }
 }
 
 /* Main Body */
@@ -57,7 +75,6 @@ h1 {
     background-color: #5d5e60;
     margin-top: 2rem;
     padding-top: 2rem;
-    min-height: 90vh;
 }
 
 h2 {
@@ -83,51 +100,50 @@ h4 {
     font-size: 1.25rem;
 }
 
-/* .title {
-    margin: 4rem auto;
-} */
+@media only screen and (min-width: 768px) {
 
-/* Burguers Slide */
+}
+
+/* Burgers Slide */
 
 
-.cardapio, .pedido-online {
+.cardapio, .pedido-online-link {
     text-decoration: none;
     color: white;
     font-size: 2.5rem;
     margin: 1rem auto;
-    /* width: 100%; */
     text-align: center;
 }
 
-.cardapio:active, .cardapio:visited,.pedido-online:active, .pedido-online:visited {
+.cardapio:active, .cardapio:visited,.pedido-online-link:active, .pedido-online-link:visited {
     text-decoration: none;
     color: white;
 }
 
-.cardapio:hover, .pedido-online:hover {
+.cardapio:hover, .pedido-online-link:hover {
     text-decoration: underline;
     font-size: 2.6;
 }
 
 .burguers {
-    width: 40rem;
+    width: 92%;
     position: relative;
     margin: 0 auto;
     margin-bottom: 4rem;
-    max-width: 92%;
+    max-width: 40rem;
     border-radius: 1.5rem;
 }
 
 .burguerPic {
-    max-width: 100%;
+    /* max-width: 100%; */
     display: none;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 .burguerImg {
     margin: 0 auto;
     border-radius: 1.5rem;
-    width: 40rem;
+    /* width: 40rem; */
     max-width: 100%;
 }
 
@@ -152,10 +168,6 @@ h4 {
     border-radius: 2.5rem 0 0 2.5rem;
 }
 
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
 .text {
     /* color: rgb(245, 245, 245); */
     color: white;
@@ -172,15 +184,15 @@ h4 {
 }
 
 .numbertext {
-    display: none;
     color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
-    top: 0;
+    bottom: 0;
   }
 
 .dots {
+    display: none;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
@@ -208,25 +220,46 @@ h4 {
     animation-duration: 1.5s;
 }
 
+@keyframes nextBackground {
+    0% {background-color: rgba(0, 0, 0, 0.0);}
+    50% {background-color: rgba(0, 0, 0, 0.6);}
+    100% {background-color: rgba(0, 0, 0, 0.0);}
+}
+
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1;}
+}
+
+@media only screen and (min-width: 600px) {
+    .dots {
+        display:block;
+    }
+}
+@media only screen and (min-width: 900px) {
+    .numbertext {
+        display: none;
+    }
+    
+    .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, .6);     
+    }
 }
 
 
 
 /* Location */
 
+.location {
+}
+
 .maps {
-    margin: 0 auto;
-    width: 50rem;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    padding-bottom:1rem ;
 }
 
 .place-container{
     width: 22rem;
+    margin: auto;
     /* border: .5rem rgb(196, 195, 195) solid; */
     border-radius: .5rem;
     background-color: rgb(48, 48, 48);
@@ -250,6 +283,15 @@ p {
     height: 3.2rem;
 }
 
+@media only screen and (min-width: 900px) {
+    .maps {
+        display: flex;
+        margin: 0 auto;
+        max-width: 50rem;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+}
 
 /* Footer */
 
