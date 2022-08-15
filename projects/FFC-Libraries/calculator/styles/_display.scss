@@ -3,3 +3,21 @@
     margin: .5rem;
     border: 1px solid black;
 }
+
+.displayes {
+    height: 4.5rem;
+    width: 100%;
+    text-align: end;
+
+}
+
+.upperDisplay {
+    font-size: 2rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: rgb(73, 68, 68);
+}
+.mainDisplay {
+    font-size: 3rem;
+}

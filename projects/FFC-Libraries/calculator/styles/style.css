@@ -10,10 +10,6 @@
 }
 
 .calculatorSector {
-  width: 27.5rem;
-  height: 35.5rem;
-  background-color: white;
-  border: 1px solid black;
   margin: auto;
   position: absolute;
   top: 50%;
@@ -22,8 +18,9 @@
 }
 
 .calculatorContainer {
+  background-color: white;
   width: 27rem;
-  height: 35rem;
+  height: 34.5rem;
   display: block;
   border: 1px solid black;
   margin: 0.2rem auto;
@@ -35,14 +32,36 @@
   border: 1px solid black;
 }
 
+.displayes {
+  height: 4.5rem;
+  width: 100%;
+  text-align: end;
+}
+
+.upperDisplay {
+  font-size: 2rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: rgb(73, 68, 68);
+}
+
+.mainDisplay {
+  font-size: 3rem;
+}
+
+.keyboard {
+  max-width: 27rem;
+  max-height: 24rem;
+  height: 100%;
+}
+
 .key {
-  height: 3.5rem;
-  border: 1px solid black;
+  height: 4.5rem;
   margin: 0.15rem 0.25rem;
   width: 100%;
   font-size: 2rem;
   text-align: center;
-  padding-top: 1rem;
 }
 
 .row {
@@ -52,5 +71,5 @@
 }
 
 #zero {
-  width: 211%;
+  width: 59rem;
 }

@@ -1,8 +1,7 @@
 .calculatorSector {
-    width: 27.5rem;
-    height: 35.5rem;
-    background-color: white;
-    border: 1px solid black;
+    // width: 27.5rem;
+    // height: 35.5rem;
+    // border: 1px solid black;
     margin: auto;
     position: absolute;
     top: 50%;
@@ -11,10 +10,10 @@
 }
 
 .calculatorContainer {
+    background-color: white;
     width: 27rem;
-    height: 35rem;
+    height: 34.5rem;
     display: block;
-    // margin: auto;
     border: 1px solid black;
     margin: .2rem auto;
 }
