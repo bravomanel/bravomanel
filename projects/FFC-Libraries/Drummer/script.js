@@ -114,14 +114,14 @@ class App extends React.Component {
         height: "2.75rem",
       },
       display: {
-        border: '.25rem solid black',
-        margin: '.25rem',
-        textAlign: 'center',
-        fontSize: '1.25rem',
+        border: ".25rem solid black",
+        margin: ".25rem",
+        textAlign: "center",
+        fontSize: "1.25rem",
       },
       keypad: {
-        textAlign: 'center',
-      }
+        textAlign: "center",
+      },
     };
 
     return (

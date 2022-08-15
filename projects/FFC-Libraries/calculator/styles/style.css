@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  font-size: 16px;
+}
+
+.gradient {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(white, rgb(92, 92, 255));
+}
+
+.calculatorSector {
+  width: 27.5rem;
+  height: 35.5rem;
+  background-color: white;
+  border: 1px solid black;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.calculatorContainer {
+  width: 27rem;
+  height: 35rem;
+  display: block;
+  border: 1px solid black;
+  margin: 0.2rem auto;
+}
+
+.display {
+  height: 9rem;
+  margin: 0.5rem;
+  border: 1px solid black;
+}
+
+.key {
+  height: 3.5rem;
+  border: 1px solid black;
+  margin: 0.15rem 0.25rem;
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0rem 0.25rem;
+}
+
+#zero {
+  width: 211%;
+}
