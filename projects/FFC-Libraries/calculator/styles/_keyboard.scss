@@ -6,15 +6,37 @@
     // width: 100%;
     height: 100%;
     // border: 3px solid red;
+
 }
 
 .key {
     height: 4.5rem;
-    // border: 1px solid black;
+    border: 1px solid black;
     margin: .15rem .25rem;
     width: 100%;
     font-size: 2rem;
     text-align: center;
+
+    background-color: rgb(250, 245, 237);
+    // background-color: rgb(228, 124, 92);
+    color: #3d204e;
+
+    &:hover {
+        background-color: rgb(207, 192, 228);
+    }
+    &:active {
+        background-color: rgb(162, 116, 192);
+    }
+}
+
+#delete, #clear, #add, #multiply, #subtract, #divide, #equals, #decimal { 
+    background-color: rgb(162, 116, 192);
+    &:hover {
+        background-color: rgb(207, 192, 228);
+    }
+    &:active {
+        background-color: rgb(250, 245, 237);
+    }
 }
 
 .row {
@@ -23,6 +45,6 @@
     margin: 0rem .25rem;
 }
 
-#zero {
+#zero, #add {
     width: 59rem;
 }

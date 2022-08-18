@@ -1,23 +1,27 @@
 .display {
-    height: 9rem;
-    margin: .5rem;
-    border: 1px solid black;
+  height: 9rem;
+  margin: 0.5rem;
+  border: 1px solid black;
+  background-color: rgb(250, 245, 237);
 }
 
 .displayes {
-    height: 4.5rem;
-    width: 100%;
-    text-align: end;
-
+  height: 4.5rem;
+  width: 100%;
+  text-align: end;
 }
 
 .upperDisplay {
-    font-size: 2rem;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    color: rgb(73, 68, 68);
+  font-size: 2rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  // color: rgb(73, 68, 68);
+//   color: rgb(46, 28, 209);
+color: #20db93
 }
 .mainDisplay {
     font-size: 3rem;
+    // color: rgb(21, 13, 94);
+    color: #79419c;
 }
