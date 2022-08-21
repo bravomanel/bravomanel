@@ -1,0 +1,70 @@
+.timer-config {
+  display: flex;
+  flex-flow: row nowrap;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: white;
+  margin-left: 2rem;
+  width: 18rem;
+
+  h4 {
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+  }
+  .botoes-tomates {
+    border-radius: 2rem;
+    height: 3rem;
+  }
+}
+
+.config {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+  align-items: center;
+  background-color: white;
+  border-radius: 5rem;
+  height: 3.5rem;
+}
+
+.lengths {
+  font-size: 1.75rem;
+  width: 2.5rem;
+  color: black;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    
+    &[type="number"] {
+        -moz-appearance: textfield;
+    }
+    border: none;
+}
+
+.control {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row nowrap;
+}
+
+.controlBtns {
+  width: 46%;
+  height: 3rem;
+  border: none;
+  font-size: 1.5rem;
+}
+
+#start_stop {
+  border-radius: 5rem;
+  // background-color: white;
+}
+
+#reset {
+  border-radius: 0.5rem;
+  background-color: #aa2d35;
+  color: white;
+}
