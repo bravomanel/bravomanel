@@ -1,0 +1,28 @@
+body {
+//   background-color: red;
+  background-color: #ce2b37;
+}
+
+#tomate {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 22rem;
+  margin: auto;
+  padding: 0.25rem;
+
+  color: #ffffff;
+
+  // background-color: yellow;
+  // border: 2px solid red;
+  border-radius: 0.25rem;
+}
+
+/*
+ Italian Flag Colors
+ Green: #009246
+ White: #ffffff
+ Red: #ce2b37
+*/
