@@ -30,6 +30,11 @@ h1 {
   margin: 0;
 }
 
+p {
+   color: rgb(194, 0, 0);
+   font-size: 1.25rem;
+}
+
 .scoreHolder {
   position: fixed;
   top: 30%;
