@@ -1,0 +1,105 @@
+body {
+  background-color: #ce2b37;
+}
+
+#tomate {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 22rem;
+  margin: auto;
+  padding: 0.25rem;
+  color: #ffffff;
+  border-radius: 0.25rem;
+}
+
+/*
+ Italian Flag Colors
+ Green: #009246
+ White: #ffffff
+ Red: #ce2b37
+*/
+#display {
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+#timer-label {
+  font-size: 2.5rem;
+  border: 3px solid white;
+  border-radius: 5rem;
+  margin-bottom: 0.5rem;
+}
+
+#time-left {
+  font-size: 6rem;
+  border-radius: 0.5rem;
+}
+
+.timer-config {
+  display: flex;
+  flex-flow: row nowrap;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: white;
+  margin-left: 2rem;
+  width: 18rem;
+}
+.timer-config h4 {
+  font-size: 1.5rem;
+  padding-left: 0.5rem;
+}
+.timer-config .botoes-tomates {
+  border-radius: 2rem;
+  height: 3rem;
+}
+
+.config {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+  align-items: center;
+  background-color: white;
+  border-radius: 5rem;
+  height: 3.5rem;
+}
+
+.lengths {
+  font-size: 1.75rem;
+  width: 2.5rem;
+  color: black;
+  border: none;
+}
+.lengths::-webkit-outer-spin-button, .lengths::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.lengths[type=number] {
+  -moz-appearance: textfield;
+}
+
+.control {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row nowrap;
+}
+
+.controlBtns {
+  width: 46%;
+  height: 3rem;
+  border: none;
+  font-size: 1.5rem;
+}
+
+#start_stop {
+  border-radius: 5rem;
+}
+
+#reset {
+  border-radius: 0.5rem;
+  background-color: #aa2d35;
+  color: white;
+}
