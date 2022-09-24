@@ -1,34 +1,38 @@
 nav {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 0rem;
-    background: rgb(185, 185, 185);
-    z-index: 5;
-    border-bottom: 2px solid red;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 0rem;
+	background: rgb(185, 185, 185);
+	z-index: 5;
+	border-bottom: 2px solid red;
 }
 
-nav a, nav a:visited {
-    text-decoration: none;
-    color: black;
+nav a,
+nav a:visited {
+	text-decoration: none;
+	color: black;
 }
 
 nav a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 .directions {
-    font-size: 1.25rem;
-    padding-left: 2rem;
+	font-size: 1.25rem;
+	padding-left: 2rem;
 }
 
 .social {
-    width: 12rem;
-    justify-content: flex-end;
-    padding-top: .325rem;
-    padding-right: 2rem;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-end;
+
+	width: 12rem;
+	padding-top: 0.325rem;
+	padding-right: 2rem;
 }

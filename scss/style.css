@@ -1,0 +1,358 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.contact-social a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.75rem;
+  color: black;
+  text-decoration: none;
+}
+.contact-social a__:visited {
+  text-decoration: none;
+  color: black;
+}
+.contact-social a:hover .icons {
+  display: none;
+}
+.contact-social a:hover .gifs {
+  display: inline-block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cutive Mono", monospace;
+  font-size: 1.5rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 1rem;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0rem;
+  background: rgb(185, 185, 185);
+  z-index: 5;
+  border-bottom: 2px solid red;
+}
+
+nav a,
+nav a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.directions {
+  font-size: 1.25rem;
+  padding-left: 2rem;
+}
+
+.social {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  width: 12rem;
+  padding-top: 0.325rem;
+  padding-right: 2rem;
+}
+
+html {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.window {
+  height: 100vh;
+  width: 100vw;
+}
+
+.aboutme {
+  background: rgb(35, 35, 35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.text {
+  text-align: left;
+  color: white;
+  font-family: "Cutive Mono", monospace;
+  font-size: 2rem;
+  white-space: nowrap;
+  width: 20em;
+}
+
+.line1 {
+  overflow: hidden;
+  border-right: 2px solid rgb(35, 35, 35);
+  width: 7.85em;
+}
+
+.line2 {
+  overflow: hidden;
+  border-right: 2px solid rgb(35, 35, 35);
+  width: 19.45em;
+}
+
+.line3 {
+  overflow: hidden;
+  border-right: 2px solid rgb(35, 35, 35);
+  width: 12.1em;
+}
+
+.line4 {
+  overflow: hidden;
+  border-right: 2px solid rgb(35, 35, 35);
+  width: 17.45em;
+}
+
+.line5 {
+  overflow: hidden;
+  border-right: 2px solid rgb(35, 35, 35);
+  width: 17em;
+}
+
+.line1 {
+  -webkit-animation: type1 1.04s steps(13) 2s 1 normal both, blinkTextCursor 1s 0s 2, textCursor 1.04s 2s 1, blinkTextCursor 500ms 3.04s 1;
+          animation: type1 1.04s steps(13) 2s 1 normal both, blinkTextCursor 1s 0s 2, textCursor 1.04s 2s 1, blinkTextCursor 500ms 3.04s 1;
+}
+
+.line2 {
+  -webkit-animation: type2 2.56s steps(32) 3.54s 1 normal both, textCursor 2.56s 3.54s 1, blinkTextCursor 500ms 6.1s 1;
+          animation: type2 2.56s steps(32) 3.54s 1 normal both, textCursor 2.56s 3.54s 1, blinkTextCursor 500ms 6.1s 1;
+}
+
+.line3 {
+  -webkit-animation: type3 1.6s steps(20) 6.6s 1 normal both, textCursor 1.6s 6.6s 1, blinkTextCursor 500ms 8.2s 1;
+          animation: type3 1.6s steps(20) 6.6s 1 normal both, textCursor 1.6s 6.6s 1, blinkTextCursor 500ms 8.2s 1;
+}
+
+.line4 {
+  -webkit-animation: type4 2.32s steps(29) 8.7s 1 normal both, textCursor 2.32s 8.7s 1, blinkTextCursor 1s 11.02s 3;
+          animation: type4 2.32s steps(29) 8.7s 1 normal both, textCursor 2.32s 8.7s 1, blinkTextCursor 1s 11.02s 3;
+}
+
+.line5 {
+  -webkit-animation: type5 2.32s steps(29) 13.72s 1 normal both, textCursor 2.42s 13.62s 1, blinkTextCursor 1s steps(13) 15.84s infinite;
+          animation: type5 2.32s steps(29) 13.72s 1 normal both, textCursor 2.42s 13.62s 1, blinkTextCursor 1s steps(13) 15.84s infinite;
+}
+
+@-webkit-keyframes textCursor {
+  0% {
+    border-right-color: rgb(35, 35, 35);
+  }
+  1% {
+    border-right-color: white;
+  }
+  99% {
+    border-right-color: white;
+  }
+  100% {
+    border-right-color: rgb(35, 35, 35);
+  }
+}
+
+@keyframes textCursor {
+  0% {
+    border-right-color: rgb(35, 35, 35);
+  }
+  1% {
+    border-right-color: white;
+  }
+  99% {
+    border-right-color: white;
+  }
+  100% {
+    border-right-color: rgb(35, 35, 35);
+  }
+}
+@-webkit-keyframes blinkTextCursor {
+  0% {
+    border-right-color: rgb(35, 35, 35);
+  }
+  1% {
+    border-right-color: rgb(35, 35, 35);
+  }
+  2% {
+    border-right-color: white;
+  }
+  51% {
+    border-right-color: white;
+  }
+  52% {
+    border-right-color: rgb(35, 35, 35);
+  }
+  100% {
+    border-right-color: rgb(35, 35, 35);
+  }
+}
+@keyframes blinkTextCursor {
+  0% {
+    border-right-color: rgb(35, 35, 35);
+  }
+  1% {
+    border-right-color: rgb(35, 35, 35);
+  }
+  2% {
+    border-right-color: white;
+  }
+  51% {
+    border-right-color: white;
+  }
+  52% {
+    border-right-color: rgb(35, 35, 35);
+  }
+  100% {
+    border-right-color: rgb(35, 35, 35);
+  }
+}
+@-webkit-keyframes type1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 7.9em;
+  }
+}
+@keyframes type1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 7.9em;
+  }
+}
+@-webkit-keyframes type2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 19.45em;
+  }
+}
+@keyframes type2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 19.45em;
+  }
+}
+@-webkit-keyframes type3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 12.1em;
+  }
+}
+@keyframes type3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 12.1em;
+  }
+}
+@-webkit-keyframes type4 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17.45em;
+  }
+}
+@keyframes type4 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17.45em;
+  }
+}
+@-webkit-keyframes type5 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17em;
+  }
+}
+@keyframes type5 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17em;
+  }
+}
+.gifs {
+  display: none;
+  width: 3.1rem;
+}
+
+.icon-container {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+}
+
+.projects, .project {
+  background-color: rgba(221, 221, 221, 0.75);
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.projects h2, .project h2 {
+  font-size: 3rem;
+}
+.projects a, .project a {
+  font-size: 1.75rem;
+  color: black;
+}
+.projects a__:visited, .project a__:visited {
+  color: black;
+}
