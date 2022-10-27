@@ -4,27 +4,42 @@
 
 <head>
    <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
    <title>Bravo - Personal Portfolio</title>
 
    <link rel="preconnect" href="https://fonts.gstatic.com" />
    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet" />
 
-   <link rel="stylesheet" href="scss/style.css" />
+   <link rel="stylesheet" href="styles/style.css" />
    <link rel="icon" type="image/png" sizes="32x32" href="images/headphone.svg" />
 </head>
 
 <body>
-   <header>
-      <div class="navcontainer">
-         <nav class="navbar">
-            <div class="directions">
-               <a href="#aboutme">About Me</a>
-               <a href="#projects">Projects</a>
-               <a href="#contact">Contact</a>
+   <header id="header">
+
+      <div id="mainHeader">
+         <h1 class="navLinkStyle">
+            <a href="#aboutme" class="navLinkStyle">
+               EMANUEL BRAVO
+            </a>
+         </h1>
+
+         <div id="mobileMenuButton">
+            <div id='navSlash1'></div>
+            <div id='navSlash2'></div>
+            <div id='navSlash3'></div>
+         </div>
+
+         <nav id="navDesktop">
+            <div class="desktopMenu">
+               <a href="#aboutme" class="navLinkStyle">About Me</a>
+               <a href="#projects" class="navLinkStyle">Projects</a>
+               <a href="#contact" class="navLinkStyle">Contact</a>
             </div>
-            <h1>EMANUEL BRAVO</h1>
-            <div class="social">
+
+            <div class="headerSocial">
                <a href="https://github.com/bravomanel" target="_blank">
                   <div class="icon-container">
                      <img class="icons" src="images/icons/dark-github.svg" alt="github" />
@@ -42,7 +57,17 @@
                </a>
             </div>
          </nav>
+
       </div>
+
+      <nav id="navMobile" class="navMenuTransition">
+         <!-- <div id="mobileMenu" class=""> -->
+         <a href="#aboutme" class="navLinkStyle">About Me</a>
+         <a href="#projects" class="navLinkStyle">Projects</a>
+         <a href="#contact" class="navLinkStyle">Contact</a>
+         <!-- </div> -->
+      </nav>
+
    </header>
 
    <div class="aboutme window" id="aboutme">
@@ -189,7 +214,21 @@
          </a>
       </div>
    </div>
+
+   <script>
+      const mobileMenuButton = document.getElementById('mobileMenuButton');
+      const navMobile = document.getElementById('navMobile');
+
+      mobileMenuButton.addEventListener('click', () => {
+         // mobileMenuButton.classList.toggle("hidden");
+         mobileMenuButton.classList.toggle("change");
+         // navMobile.classList.toggle("hidden");
+         navMobile.classList.toggle("navMenuTransition");
+      })
+   </script>
+
    <!-- All icons from https://icons8.com/ -->
+
 </body>
 
 </html>

@@ -1,0 +1,40 @@
+.contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+
+}
+
+.contact-social {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+
+   
+	a {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		font-size: 1.75rem;
+		color: black;
+		text-decoration: none;
+
+		&__:visited {
+			text-decoration: none;
+			color: black;
+		}
+
+      &:hover {
+         .icons {
+            display: none;
+         }
+         .gifs {
+            display: inline-block;
+         }
+      }
+	}
+}
