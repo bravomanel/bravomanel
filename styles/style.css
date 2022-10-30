@@ -13,20 +13,30 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 5rem;
+  height: 4.25rem;
   border-bottom: 2px solid red;
   background: rgb(185, 185, 185);
   padding: 1rem 0rem;
   z-index: 1;
 }
+@media only screen and (min-width: 900px) {
+  #mainHeader {
+    height: 5rem;
+  }
+}
 
 h1 {
-  font-size: 2.75rem;
+  font-size: 2rem;
   position: absolute;
   right: 50%;
   transform: translateX(50%);
   white-space: nowrap;
   color: #333;
+}
+@media only screen and (min-width: 900px) {
+  h1 {
+    font-size: 2.75rem;
+  }
 }
 
 .navLinkStyle,
@@ -43,25 +53,20 @@ h1 {
 #navDesktop {
   width: 100vw;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .desktopMenu {
-  position: absolute;
-  left: 2rem;
+  margin-left: 2rem;
   font-size: 1.25rem;
-  margin: auto;
-  padding-top: 2.75rem;
 }
 
 .headerSocial {
-  padding-top: 1.25rem;
-  position: absolute;
-  right: 3rem;
+  margin-right: 3.25rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  margin: auto;
   width: 12rem;
 }
 
@@ -74,7 +79,7 @@ h1 {
 #navSlash1,
 #navSlash2,
 #navSlash3 {
-  width: 35px;
+  width: 30px;
   height: 5px;
   background-color: #333;
   margin: 6px 2px;
@@ -82,8 +87,8 @@ h1 {
 }
 
 #mobileMenuButton {
-  margin: auto 2rem;
-  width: 2.5rem;
+  margin: auto 0.75rem;
+  width: 30px;
 }
 @media only screen and (min-width: 1200px) {
   #mobileMenuButton {
@@ -97,7 +102,7 @@ h1 {
   transition: 0.4s;
   width: 100%;
   background-color: rgb(185, 185, 185);
-  height: 12rem;
+  height: 10rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
@@ -108,9 +113,14 @@ h1 {
     display: none;
   }
 }
+@media only screen and (min-width: 900px) {
+  #navMobile {
+    height: 10.5rem;
+  }
+}
 
 #navMobile a {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   margin: 0.75rem;
 }
 
@@ -145,9 +155,19 @@ h1 {
   text-align: left;
   color: white;
   font-family: "Cutive Mono", monospace;
-  font-size: 2rem;
+  font-size: 1.1rem;
   white-space: nowrap;
   max-width: 20em;
+}
+@media only screen and (min-width: 900px) {
+  .text {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .text {
+    font-size: 2rem;
+  }
 }
 
 .line1 {
@@ -359,7 +379,8 @@ h1 {
   width: 100%;
 }
 
-.projects, .project {
+.projects,
+.project {
   background-color: rgba(221, 221, 221, 0.75);
   align-items: center;
   text-align: center;
@@ -368,35 +389,55 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-.projects h2, .project h2 {
-  font-size: 3rem;
+.projects h2,
+.project h2 {
+  font-size: 1.5rem;
 }
-.projects a, .project a {
-  font-size: 1.75rem;
+@media only screen and (min-width: 900px) {
+  .projects h2,
+.project h2 {
+    font-size: 2.25rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .projects h2,
+.project h2 {
+    font-size: 3rem;
+  }
+}
+.projects a,
+.project a {
+  font-size: 1.25rem;
   color: black;
 }
-.projects a__:visited, .project a__:visited {
+@media only screen and (min-width: 900px) {
+  .projects a,
+.project a {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .projects a,
+.project a {
+    font-size: 1.75rem;
+  }
+}
+.projects a__:visited,
+.project a__:visited {
   color: black;
 }
 
 .contact {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.contact-social {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
 .contact-social a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: black;
   text-decoration: none;
 }
@@ -410,15 +451,13 @@ h1 {
 .contact-social a:hover .gifs {
   display: inline-block;
 }
+@media only screen and (min-width: 1200px) {
+  .contact-social a {
+    font-size: 1.75rem;
+  }
+}
 
 .gifs {
   display: none;
   width: 3.1rem;
-}
-
-.icon-container {
-  padding: 0.75rem 1rem;
-  text-align: center;
-  width: 3rem;
-  height: 3rem;
 }
