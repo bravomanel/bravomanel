@@ -379,6 +379,10 @@ h1 {
   width: 100%;
 }
 
+#crosstext {
+  text-decoration: line-through;
+}
+
 .projects,
 .project {
   background-color: rgba(221, 221, 221, 0.75);

@@ -2,6 +2,9 @@ const canvas = document.getElementById('tetris');
 const context = canvas.getContext('2d');
 context.scale(20, 20);
 
+alert(`This game is only playable with a real keyboard, not mobile supported! 
+\nSó é possível jogar este com um teclado real, não há suporte para dispositivos móveis!`);
+
 function arenaSweep () {
     let rowCount = 1;
     outer: for (let y = arena.length -1; y > 0; y--) {

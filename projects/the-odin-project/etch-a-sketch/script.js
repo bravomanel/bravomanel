@@ -13,6 +13,9 @@ let blueBtn = document.getElementById("blue");
 let pickColor = document.getElementById("pickColor")
 let pickBtn = document.getElementById("pick");
 
+alert(`This game is only usable with a mouse, not mobile supported! 
+\nSó é possível usar este site com um mouse, não há suporte para dispositivos móveis!`);
+
 mainGrid.addEventListener('click', function() { activatePen()});
 
 redBtn.onclick = function() {

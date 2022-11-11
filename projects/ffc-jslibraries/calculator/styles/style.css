@@ -25,10 +25,20 @@
   border: 1px solid black;
   margin: 0.2rem auto;
 }
+@media only screen and (max-width: 500px) {
+  .calculatorContainer {
+    width: 22rem;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .calculatorContainer {
+    width: 20rem;
+  }
+}
 
 .display {
   height: 9rem;
-  margin: 0.5rem;
+  margin: 0.35rem;
   border: 1px solid black;
   background-color: rgb(250, 245, 237);
 }
@@ -61,36 +71,65 @@
 .key {
   height: 4.5rem;
   border: 1px solid black;
-  margin: 0.15rem 0.25rem;
   width: 100%;
   font-size: 2rem;
-  text-align: center;
   background-color: rgb(250, 245, 237);
   color: #3d204e;
 }
-.key:hover {
-  background-color: rgb(207, 192, 228);
+@media only screen and (min-width: 500px) {
+  .key:hover {
+    background-color: rgb(207, 192, 228);
+  }
 }
 .key:active {
   background-color: rgb(162, 116, 192);
 }
 
-#delete, #clear, #add, #multiply, #subtract, #divide, #equals, #decimal {
+#delete,
+#clear,
+#add,
+#multiply,
+#subtract,
+#divide,
+#equals,
+#decimal {
   background-color: rgb(162, 116, 192);
 }
-#delete:hover, #clear:hover, #add:hover, #multiply:hover, #subtract:hover, #divide:hover, #equals:hover, #decimal:hover {
-  background-color: rgb(207, 192, 228);
+@media only screen and (min-width: 500px) {
+  #delete:hover,
+#clear:hover,
+#add:hover,
+#multiply:hover,
+#subtract:hover,
+#divide:hover,
+#equals:hover,
+#decimal:hover {
+    background-color: rgb(207, 192, 228);
+  }
 }
-#delete:active, #clear:active, #add:active, #multiply:active, #subtract:active, #divide:active, #equals:active, #decimal:active {
+#delete:active,
+#clear:active,
+#add:active,
+#multiply:active,
+#subtract:active,
+#divide:active,
+#equals:active,
+#decimal:active {
   background-color: rgb(250, 245, 237);
 }
 
 .row {
-  display: flex;
-  flex-flow: row nowrap;
-  margin: 0rem 0.25rem;
+  margin: 0.35rem 0.35rem;
+  display: grid;
+  grid-template-columns: repeat(4, 3fr);
+  -moz-column-gap: 0.35rem;
+       column-gap: 0.35rem;
 }
 
-#zero, #add {
-  width: 59rem;
+.firstRow {
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+.fifthRow {
+  grid-template-columns: 2fr 1fr 1fr;
 }

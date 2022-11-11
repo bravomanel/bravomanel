@@ -1,50 +1,61 @@
 .keyboard {
-    // margin-left: .25rem;
-    max-width: 27rem;
-    max-height: 24rem;
-
-    // width: 100%;
-    height: 100%;
-    // border: 3px solid red;
-
+   max-width: 27rem;
+   max-height: 24rem;
+   height: 100%;
 }
 
 .key {
-    height: 4.5rem;
-    border: 1px solid black;
-    margin: .15rem .25rem;
-    width: 100%;
-    font-size: 2rem;
-    text-align: center;
+   height: 4.5rem;
+   border: 1px solid black;
+   width: 100%;
+   font-size: 2rem;
 
-    background-color: rgb(250, 245, 237);
-    // background-color: rgb(228, 124, 92);
-    color: #3d204e;
+   background-color: rgb(250, 245, 237);
+   color: #3d204e;
 
-    &:hover {
-        background-color: rgb(207, 192, 228);
-    }
-    &:active {
-        background-color: rgb(162, 116, 192);
-    }
+   @media only screen and (min-width: 500px) {
+      &:hover {
+         background-color: rgb(207, 192, 228);
+      }
+   }
+
+   &:active {
+      background-color: rgb(162, 116, 192);
+   }
 }
 
-#delete, #clear, #add, #multiply, #subtract, #divide, #equals, #decimal { 
-    background-color: rgb(162, 116, 192);
-    &:hover {
-        background-color: rgb(207, 192, 228);
-    }
-    &:active {
-        background-color: rgb(250, 245, 237);
-    }
+#delete,
+#clear,
+#add,
+#multiply,
+#subtract,
+#divide,
+#equals,
+#decimal {
+   background-color: rgb(162, 116, 192);
+
+   @media only screen and (min-width: 500px) {
+      &:hover {
+         background-color: rgb(207, 192, 228);
+      }
+   }
+
+   &:active {
+      background-color: rgb(250, 245, 237);
+   }
 }
 
 .row {
-    display: flex;
-    flex-flow: row nowrap;
-    margin: 0rem .25rem;
+   margin: .35rem .35rem;
+   display: grid;
+   grid-template-columns: repeat(4, 3fr);
+   column-gap: .35rem;
 }
 
-#zero, #add {
-    width: 59rem;
+.firstRow {
+   grid-template-columns: 1fr 1fr 2fr;
+}
+
+.fifthRow {
+   grid-template-columns: 2fr 1fr 1fr;
 }
