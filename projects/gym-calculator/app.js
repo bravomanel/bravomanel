@@ -28,6 +28,55 @@ function OneRepMax() {
    const calculateRM = () => {
       const weight = document.getElementById('weight').value
       const reps = document.getElementById('reps').value
+      let originalRepsPosition = 15;
+
+      switch (+reps) {
+         case 1:
+            originalRepsPosition = 0;
+            break;
+         case 2:
+            originalRepsPosition = 1;
+            break;
+         case 3:
+            originalRepsPosition = 2;
+            break;
+         case 4:
+            originalRepsPosition = 3;
+            break;
+         case 5:
+            originalRepsPosition = 4;
+            break;
+         case 6:
+            originalRepsPosition = 5;
+            break;
+         case 8:
+            originalRepsPosition = 6;
+            break;
+         case 10:
+            originalRepsPosition = 7;
+            break;
+         case 12:
+            originalRepsPosition = 8;
+            break;
+         case 16:
+            originalRepsPosition = 9;
+            break;
+         case 20:
+            originalRepsPosition = 10;
+            break;
+         case 24:
+            originalRepsPosition = 11;
+            break;
+         case 30:
+            originalRepsPosition = 12;
+            break;
+         case 40:
+            originalRepsPosition = 13;
+            break;
+         default:
+            originalRepsPosition = 14;
+            break;
+      }
 
       const oneRM = Math.round(weight * (1 + (reps / 30)));
       setWeightArr({
@@ -39,14 +88,16 @@ function OneRepMax() {
          [4]: Math.round(oneRM * 0.87) + unity,
          [5]: Math.round(oneRM * 0.85) + unity,
          [6]: Math.round(oneRM * 0.80) + unity,
-         [7]: Math.round(oneRM * 0.80) + unity,
+         [7]: Math.round(oneRM * 0.85) + unity,
          [8]: Math.round(oneRM * 0.70) + unity,
          [9]: Math.round(oneRM * 0.65) + unity,
          [10]: Math.round(oneRM * 0.60) + unity,
          [11]: Math.round(oneRM * 0.65) + unity,
          [12]: Math.round(oneRM * 0.50) + unity,
-         [13]: Math.round(oneRM * 0.40) + unity
+         [13]: Math.round(oneRM * 0.40) + unity,
+         [originalRepsPosition]: weight + unity
       });
+
    }
 
    return (
