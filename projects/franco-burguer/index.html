@@ -1,112 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Franco Burguer</title>
-    <!-- Fonts and Icons -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- Style Sheets -->
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/slides.css">
-    <link rel="stylesheet" href="styles/location.css">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Franco Burguer</title>
+   <!-- Fonts and Icons -->
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+   <!-- Style Sheets -->
+   <link rel="stylesheet" href="styles/header.css">
+   <link rel="stylesheet" href="styles/main.css">
+   <link rel="stylesheet" href="styles/footer.css">
+   <link rel="stylesheet" href="styles/slides.css">
+   <link rel="stylesheet" href="styles/location.css">
 
 </head>
 
 <body>
-    <nav class="navbar">
-        <a href="index.html" class="header">
-            <img src="img/franco-icon.png" alt="Hamburguer Icon" id="franco-icon" class="">
-            <h1>FRANCO BURGUER</h1>
-        </a>
-    </nav>
-        
-    <div class="main">
-        <div class="burguers">
-            <div class="cardapio">
-                <a href="cardapio.html" class="cardapio">
-                    <h2>
-                        Cardápio Completo
-                    </h2>
-                </a>
-            </div>
-            <div id="burguer1" class="burguerPic fade">
-                <div class="numbertext">1 / 4</div>
-                <img src="img/burguers/burguer1.jfif" alt="Hamburguer1" class="burguerImg">
-                <div class="text">Turbo Cheddar</div>
-            </div>
-            <div id="burguer2" class="burguerPic fade">
-                <div class="numbertext">2 / 4</div>
-                <img src="img/burguers/burguer2.jfif" alt="Hamburguer2" class="burguerImg">
-                <div class="text">Crispy Dog</div>
-            </div>
-            <div id="burguer3" class="burguerPic fade">
-                <div class="numbertext">3 / 4</div>
-                <img src="img/burguers/burguer3.png" alt="Hamburguer3" class="burguerImg">
-                <div class="text">Black</div>
-            </div>
-            <div id="burguer4" class="burguerPic">
-                <div class="numbertext">4 / 4</div>
-                <img src="img/burguers/burguer4.png" alt="Hamburguer4" class="burguerImg">
-                <div class="text">Venha Provar Nossos Sanduíches!</div>
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#x226A;</a>
-            <a class="next" onclick="plusSlides(1)">&#x226B;</a>
+   <nav class="navbar">
+      <a href="index.html" class="header">
+         <img src="img/franco-icon.png" alt="Hamburguer Icon" id="franco-icon" class="">
+         <h1>FRANCO BURGUER</h1>
+      </a>
+   </nav>
 
-            <div class="dots">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-            </div>
-        </div>
-
-        <div class="pedido-online-container">
-            <a href="pedido-online.html" class="pedido-online-link">
-                <h2>Faça seu pedido online aqui!</h2>
+   <main class="main">
+      <div class="burguers">
+         <div>
+            <a href="cardapio.html">
+               <h2>
+                  Cardápio Completo
+               </h2>
             </a>
-        </div>
+         </div>
+         <div id="burguer1" class="burguerPic fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="img/burguers/burguer1.jfif" alt="Hamburguer1" class="burguerImg">
+            <div class="text">Turbo Cheddar</div>
+         </div>
+         <div id="burguer2" class="burguerPic fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="img/burguers/burguer2.jfif" alt="Hamburguer2" class="burguerImg">
+            <div class="text">Crispy Dog</div>
+         </div>
+         <div id="burguer3" class="burguerPic fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="img/burguers/burguer3.png" alt="Hamburguer3" class="burguerImg">
+            <div class="text">Black</div>
+         </div>
+         <div id="burguer4" class="burguerPic">
+            <div class="numbertext">4 / 4</div>
+            <img src="img/burguers/burguer4.png" alt="Hamburguer4" class="burguerImg">
+            <div class="text">Venha Provar Nossos Sanduíches!</div>
+         </div>
+         <a class="prev" onclick="plusSlides(-1)">&#x226A;</a>
+         <a class="next" onclick="plusSlides(1)">&#x226B;</a>
 
-        <div class="location">
-                <h2>Conheça nossas lojas:</h2>
-            <div class="maps">                
-                <div class="tamoios place-container">
-                    <h3>Tamoios</h3>
-                    <p class="adressParagraph">Rua Pargo Aquárius, Cabo Frio - RJ, 28928-000</p>
-                    <div class="map-container">
-                        <iframe width="320" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=franco%20burguer&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                    </div>
-                </div>
-                <div class="rioDasOstras place-container">
-                    <h3>Rio das Ostras</h3>
-                    <p class="adressParagraph">Av. Gov. Roberto Silveira, 625 - Costazul, Rio das Ostras - RJ, 28890-000</p>
-                    <div class="map-container">
-                        <iframe width="320" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=franco%20burguer%20rio%20das%20ostras&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-        
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="phone">
-                <img src="img/phone.svg" alt="telephone" class="icon">
-                <h4>(22) 99204-5535</h4>
-            </div>
-            <div class="links">
+         <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+         </div>
+      </div>
 
-                <a href="https://www.facebook.com/francoburgerbr" target="_blank"><img src="img/facebook.svg" alt="Facebook" class="icon"></a>
-                <a href="https://www.instagram.com/francoburgerbr/" target="_blank"><img src="img/instagram.svg" alt="Instagram" class="icon"></a>                    
-                <a href="https://wa.me/+5522992045535?text=Eu%20gostaria%20de%20pedir%20um%20hambúrguer!" target="_blank"><img src="img/whatsapp.svg" alt="Whatsapp" class="icon"></a>
+      <div class="pedido-online-container">
+         <a href="pedido-online.html" class="pedido-online-link">
+            <h2>Faça seu pedido online aqui!</h2>
+         </a>
+      </div>
+
+      <div class="location">
+         <h2>Conheça nossas lojas:</h2>
+         <div class="maps">
+            <div class="tamoios place-container">
+               <h3>Tamoios</h3>
+               <p class="adressParagraph">Av. Independência esquina com a Rua Pargo, em frente da Marbel - Aquárius,
+                  Cabo Frio - RJ</p>
+               <div class="map-container">
+                  <iframe width="320" height="400" id="gmap_canvas"
+                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14732.071197274343!2d-42.0004428!3d-22.6158105!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8a3de627dfae713!2sFranco%20Burger%20Tamoios!5e0!3m2!1spt-BR!2sbr!4v1673830488527!5m2!1spt-BR!2sbr"
+                     frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+               </div>
             </div>
-        </div>
-    </footer>
-    <script src="scripts/script.js"></script>
+            <div class="rioDasOstras place-container">
+               <h3>Rio das Ostras</h3>
+               <p class="adressParagraph">Av. Gov. Roberto Silveira, 625 - Costazul, Rio das Ostras - RJ, 28890-000</p>
+               <div class="map-container">
+                  <iframe width="320" height="400" id="gmap_canvas"
+                     src="https://maps.google.com/maps?q=franco%20burguer%20rio%20das%20ostras&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                     frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+               </div>
+            </div>
+         </div>
+      </div>
+   </main>
+
+   <footer class="footer">
+      <div class="footer-container">
+      <div class="phone">
+         <img src="img/phone.svg" alt="telephone" class="icon">
+         <p>(22) 99204-5535</p>
+      </div>
+      <div class="links">
+         <a href="https://www.facebook.com/francoburgerbr" target="_blank"><img src="img/facebook.svg" alt="Facebook"
+               class="icon"></a>
+         <a href="https://www.instagram.com/francoburgerbr/" target="_blank"><img src="img/instagram.svg"
+               alt="Instagram" class="icon"></a>
+         <a href="https://wa.me/+5522992045535?text=Eu%20gostaria%20de%20pedir%20um%20hambúrguer!" target="_blank"><img
+               src="img/whatsapp.svg" alt="Whatsapp" class="icon"></a>
+      </div>
+      </div>
+   </footer>
+   <script src="scripts/script.js"></script>
 </body>
+
 </html>
