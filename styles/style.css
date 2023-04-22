@@ -50,14 +50,8 @@ h1 {
   text-decoration: underline;
 }
 
-#navDesktop {
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .desktopMenu {
+  margin-top: 0.55rem;
   margin-left: 2rem;
   font-size: 1.25rem;
 }
@@ -201,43 +195,23 @@ h1 {
 }
 
 .line1 {
-  -webkit-animation: type1 1.04s steps(13) 2s 1 normal both, blinkTextCursor 1s 0s 2, textCursor 1.04s 2s 1, blinkTextCursor 500ms 3.04s 1;
-          animation: type1 1.04s steps(13) 2s 1 normal both, blinkTextCursor 1s 0s 2, textCursor 1.04s 2s 1, blinkTextCursor 500ms 3.04s 1;
+  animation: type1 1.04s steps(13) 2s 1 normal both, blinkTextCursor 1s 0s 2, textCursor 1.04s 2s 1, blinkTextCursor 500ms 3.04s 1;
 }
 
 .line2 {
-  -webkit-animation: type2 2.56s steps(32) 3.54s 1 normal both, textCursor 2.56s 3.54s 1, blinkTextCursor 500ms 6.1s 1;
-          animation: type2 2.56s steps(32) 3.54s 1 normal both, textCursor 2.56s 3.54s 1, blinkTextCursor 500ms 6.1s 1;
+  animation: type2 2.56s steps(32) 3.54s 1 normal both, textCursor 2.56s 3.54s 1, blinkTextCursor 500ms 6.1s 1;
 }
 
 .line3 {
-  -webkit-animation: type3 1.6s steps(20) 6.6s 1 normal both, textCursor 1.6s 6.6s 1, blinkTextCursor 500ms 8.2s 1;
-          animation: type3 1.6s steps(20) 6.6s 1 normal both, textCursor 1.6s 6.6s 1, blinkTextCursor 500ms 8.2s 1;
+  animation: type3 1.6s steps(20) 6.6s 1 normal both, textCursor 1.6s 6.6s 1, blinkTextCursor 500ms 8.2s 1;
 }
 
 .line4 {
-  -webkit-animation: type4 2.32s steps(29) 8.7s 1 normal both, textCursor 2.32s 8.7s 1, blinkTextCursor 1s 11.02s 3;
-          animation: type4 2.32s steps(29) 8.7s 1 normal both, textCursor 2.32s 8.7s 1, blinkTextCursor 1s 11.02s 3;
+  animation: type4 2.32s steps(29) 8.7s 1 normal both, textCursor 2.32s 8.7s 1, blinkTextCursor 1s 11.02s 3;
 }
 
 .line5 {
-  -webkit-animation: type5 2.32s steps(29) 13.72s 1 normal both, textCursor 2.42s 13.62s 1, blinkTextCursor 1s steps(13) 15.84s infinite;
-          animation: type5 2.32s steps(29) 13.72s 1 normal both, textCursor 2.42s 13.62s 1, blinkTextCursor 1s steps(13) 15.84s infinite;
-}
-
-@-webkit-keyframes textCursor {
-  0% {
-    border-right-color: rgb(35, 35, 35);
-  }
-  1% {
-    border-right-color: white;
-  }
-  99% {
-    border-right-color: white;
-  }
-  100% {
-    border-right-color: rgb(35, 35, 35);
-  }
+  animation: type5 2.32s steps(29) 13.72s 1 normal both, textCursor 2.42s 13.62s 1, blinkTextCursor 1s steps(13) 15.84s infinite;
 }
 
 @keyframes textCursor {
@@ -249,26 +223,6 @@ h1 {
   }
   99% {
     border-right-color: white;
-  }
-  100% {
-    border-right-color: rgb(35, 35, 35);
-  }
-}
-@-webkit-keyframes blinkTextCursor {
-  0% {
-    border-right-color: rgb(35, 35, 35);
-  }
-  1% {
-    border-right-color: rgb(35, 35, 35);
-  }
-  2% {
-    border-right-color: white;
-  }
-  51% {
-    border-right-color: white;
-  }
-  52% {
-    border-right-color: rgb(35, 35, 35);
   }
   100% {
     border-right-color: rgb(35, 35, 35);
@@ -294,28 +248,12 @@ h1 {
     border-right-color: rgb(35, 35, 35);
   }
 }
-@-webkit-keyframes type1 {
-  from {
-    width: 0;
-  }
-  to {
-    width: 7.9em;
-  }
-}
 @keyframes type1 {
   from {
     width: 0;
   }
   to {
     width: 7.9em;
-  }
-}
-@-webkit-keyframes type2 {
-  from {
-    width: 0;
-  }
-  to {
-    width: 19.45em;
   }
 }
 @keyframes type2 {
@@ -326,14 +264,6 @@ h1 {
     width: 19.45em;
   }
 }
-@-webkit-keyframes type3 {
-  from {
-    width: 0;
-  }
-  to {
-    width: 12.1em;
-  }
-}
 @keyframes type3 {
   from {
     width: 0;
@@ -342,28 +272,12 @@ h1 {
     width: 12.1em;
   }
 }
-@-webkit-keyframes type4 {
-  from {
-    width: 0;
-  }
-  to {
-    width: 17.45em;
-  }
-}
 @keyframes type4 {
   from {
     width: 0;
   }
   to {
     width: 17.45em;
-  }
-}
-@-webkit-keyframes type5 {
-  from {
-    width: 0;
-  }
-  to {
-    width: 17em;
   }
 }
 @keyframes type5 {
@@ -395,13 +309,13 @@ h1 {
 }
 @media only screen and (min-width: 900px) {
   .projects h2,
-.project h2 {
+  .project h2 {
     font-size: 2.25rem;
   }
 }
 @media only screen and (min-width: 1200px) {
   .projects h2,
-.project h2 {
+  .project h2 {
     font-size: 3rem;
   }
 }
@@ -412,13 +326,13 @@ h1 {
 }
 @media only screen and (min-width: 900px) {
   .projects a,
-.project a {
+  .project a {
     font-size: 1.5rem;
   }
 }
 @media only screen and (min-width: 1200px) {
   .projects a,
-.project a {
+  .project a {
     font-size: 1.75rem;
   }
 }

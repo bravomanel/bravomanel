@@ -21,48 +21,30 @@
 
       <div id="mainHeader">
          <h1 class="navLinkStyle">
-            <a href="index.html" class="navLinkStyle">
+            <a href="#aboutme" class="navLinkStyle">
                EMANUEL BRAVO
             </a>
          </h1>
-
+         <!-- Mobile Menu Button -->
          <div id="mobileMenuButton">
             <div id='navSlash1'></div>
             <div id='navSlash2'></div>
             <div id='navSlash3'></div>
          </div>
 
+         <!-- Desktop Menu -->
          <nav id="navDesktop">
             <div class="desktopMenu">
                <a href="#aboutme" class="navLinkStyle">About Me</a>
                <a href="#projects" class="navLinkStyle">Projects</a>
                <a href="#contact" class="navLinkStyle">Contact</a>
             </div>
-
-            <div class="headerSocial">
-               <a href="https://github.com/bravomanel" target="_blank">
-                  <div class="icon_container">
-                     <img class="icons" src="images/icons/dark-github.svg" alt="github" />
-                  </div>
-               </a>
-               <a href="https://www.linkedin.com/in/emanuel-bravo-b23bab182/" target="_blank">
-                  <div class="icon_container">
-                     <img class="icons" src="images/icons/dark-linkedin.svg" alt="linkedin" />
-                  </div>
-               </a>
-               <a href="https://www.reddit.com/user/emanuelbravo" target="_blank">
-                  <div class="icon_container">
-                     <img class="icons" src="images/icons/dark-reddit.svg" alt="reddit" />
-                  </div>
-               </a>
-            </div>
          </nav>
-
       </div>
 
       <nav id="navMobile" class="navMenuTransition">
          <!-- <div id="mobileMenu" class=""> -->
-         <a href="index.html#aboutme" id="aboutmeMobileMenuLink" class="navLinkStyle">About Me</a>
+         <a href="#aboutme" id="aboutmeMobileMenuLink" class="navLinkStyle">About Me</a>
          <a href="#projects" id="projectsMobileMenuLink" class="navLinkStyle">Projects</a>
          <a href="#contact" id="contactMobileMenuLink" class="navLinkStyle">Contact</a>
          <!-- </div> -->
@@ -156,7 +138,7 @@
                <img class="icons" src="images/icons/dark-github.svg" alt="github" />
                <img class="gifs" src="images/gifs/github.gif" alt="github" />
             </div>
-            Emanuel-Bravo
+            bravomanel
          </a>
          <a href="https://www.linkedin.com/in/emanuel-bravo-b23bab182/" target="_blank">
             <div class="icon_container">
@@ -189,26 +171,7 @@
       </div>
    </div>
 
-   <script>
-      const mobileMenuButton = document.getElementById('mobileMenuButton');
-      const navMobile = document.getElementById('navMobile');
-      const aboutmeMobileMenuLink = document.getElementById('aboutmeMobileMenuLink');
-      const projectsMobileMenuLink = document.getElementById('projectsMobileMenuLink');
-      const contactMobileMenuLink = document.getElementById('contactMobileMenuLink');
-
-      const clickButtonHandler = () => {
-         mobileMenuButton.classList.toggle("change");
-         navMobile.classList.toggle("navMenuTransition");
-
-      }
-
-      mobileMenuButton.addEventListener('click', clickButtonHandler)
-
-      aboutmeMobileMenuLink.addEventListener('click', clickButtonHandler)
-      projectsMobileMenuLink.addEventListener('click', clickButtonHandler)
-      contactMobileMenuLink.addEventListener('click', clickButtonHandler)
-
-   </script>
+   <script src="script.js"></script>
 
    <!-- All icons from https://icons8.com/ -->
 
