@@ -38,7 +38,7 @@
 .line3 {
    overflow: hidden;
    border-right: 2px solid rgb(35, 35, 35);
-   width: 12.1em;
+   width: 12.7em;
 }
 
 .line4 {
@@ -82,8 +82,8 @@
 }
 
 .line3 {
-   animation: type3 1.6s steps(20) 6.6s 1 normal both,
-      textCursor 1.6s 6.6s 1,
+   animation: type3 1.6s steps(21) 6.68s 1 normal both,
+      textCursor 1.6s 6.68s 1,
       blinkTextCursor 500ms 8.2s 1;
 }
 
@@ -220,7 +220,7 @@
    }
 
    to {
-      width: 12.1em;
+      width: 12.7em;
    }
 }
 

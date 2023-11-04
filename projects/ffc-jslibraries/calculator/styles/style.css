@@ -97,13 +97,13 @@
 }
 @media only screen and (min-width: 500px) {
   #delete:hover,
-#clear:hover,
-#add:hover,
-#multiply:hover,
-#subtract:hover,
-#divide:hover,
-#equals:hover,
-#decimal:hover {
+  #clear:hover,
+  #add:hover,
+  #multiply:hover,
+  #subtract:hover,
+  #divide:hover,
+  #equals:hover,
+  #decimal:hover {
     background-color: rgb(207, 192, 228);
   }
 }
@@ -132,4 +132,4 @@
 
 .fifthRow {
   grid-template-columns: 2fr 1fr 1fr;
-}
+}/*# sourceMappingURL=style.css.map */
