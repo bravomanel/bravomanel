@@ -4,4 +4,4 @@
 ### 👀 I’m interested in Cooking, Cinema and Gaming.
 ### 📚 Studying Computer Science  at UFF-RO (Brazil)
 ### 🚲 I’m looking to collaborate on an open project that makes peoples lifes more pratical and convenient.
-### 📫 @bravo_manel on Instagram or emanuelbravo on Reddit
+### 📫 @bravo_manel on Instagram or emanuelbravo.com
