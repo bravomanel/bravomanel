@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    background-color: #282c35;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+h1 {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2rem;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-gap: 10px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    background-color: #61dafb;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.cell:hover {
+    background-color: #4fa3d1;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.winner {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.last-play {
+    background-color: #d1634f;
+    text-decoration: underline;
+}
+
+.menu {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+button {
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#restart-btn {
+    background-color: #4caf50;
+}
+
+#restart-btn:hover {
+    background-color: #45a047;
+}
+
+#help {
+    background-color: rgb(180, 0, 0);
+}
+
+#help:hover {
+    background-color: rgb(160, 0, 0);
+}
