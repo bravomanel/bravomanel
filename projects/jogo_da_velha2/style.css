@@ -52,8 +52,7 @@ h1 {
     color: #fff;
 }
 
-.last-play {
-    background-color: #d1634f;
+.oldest-play {
     text-decoration: underline;
 }
 

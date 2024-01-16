@@ -99,11 +99,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function allowPlay(index) {
         cells[index].classList.remove('disabled');
-        cells[index].classList.add('last-play');
+        cells[index].classList.add('oldest-play');
     }
 
     function removeOldPlay(index) {
-        cells[index].classList.remove('last-play');
+        cells[index].classList.remove('oldest-play');
         cells[index].textContent = '';
         gameBoard[index] = '' 
     }
